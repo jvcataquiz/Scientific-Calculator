@@ -16,6 +16,13 @@ namespace ScientificCalculator
         {
             InitializeComponent();
         }
+        public void clearzer0()
+        {
+            if (txtboxdisplay.Text =="0")
+            {
+                txtboxdisplay.Clear();
+            }
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -50,50 +57,86 @@ namespace ScientificCalculator
         {
 
         }
+        private void clearbtn_Click(object sender, EventArgs e)
+        {
+            txtboxdisplay.Clear();
+            txtboxdisplay.Text = "0";
+        }
 
         private void decibtn_Click(object sender, EventArgs e)
         {
+            clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + ".";
         }
         private void btnzero_Click(object sender, EventArgs e)
         {
+            clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "0";
         }
         private void btn1_Click(object sender, EventArgs e)
         {
+            clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "1";
         }
         private void btn2_Click(object sender, EventArgs e)
         {
+            clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "2";
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
+            clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "3";
         }
+
         private void btn4_Click(object sender, EventArgs e)
         {
-
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "4";
         }
+
         private void btn5_Click(object sender, EventArgs e)
         {
-
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "5";
         }
+
         private void btn6_Click(object sender, EventArgs e)
         {
-
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "6";
         }
+
         private void btn7_Click(object sender, EventArgs e)
         {
-
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "7";
         }
+
         private void btn8_Click(object sender, EventArgs e)
         {
-
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "8";
         }
+
         private void btn9_Click(object sender, EventArgs e)
         {
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "9";
+        }
+
+        private void cebtn_Click(object sender, EventArgs e)
+        {
+            
+            if (txtboxdisplay.Text.Length == 1)
+            {
+                txtboxdisplay.Text = "0";
+            }
+            else
+            {
+                txtboxdisplay.Text = txtboxdisplay.Text.Substring(0, txtboxdisplay.Text.Length - 1);
+            }
 
         }
     }
