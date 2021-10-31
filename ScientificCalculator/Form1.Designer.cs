@@ -308,6 +308,7 @@ namespace ScientificCalculator
             this.tenraisedbtn.TabIndex = 16;
             this.tenraisedbtn.Text = "10^x";
             this.tenraisedbtn.UseVisualStyleBackColor = false;
+            this.tenraisedbtn.Click += new System.EventHandler(this.tenraisedbtn_Click);
             // 
             // eraisedbtn
             // 

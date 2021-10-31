@@ -16,12 +16,14 @@ namespace ScientificCalculator
         double firstvalue;
         double secondvalue;
         double answer;
+      
+      
 
         public Form1()
         {
             InitializeComponent();
         }
-
+       
      
         public void clearzer0()
         {
@@ -30,8 +32,7 @@ namespace ScientificCalculator
                 txtboxdisplay.Clear();
             }
         }
-
-
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -63,27 +64,35 @@ namespace ScientificCalculator
 
         private void equalbtn_Click(object sender, EventArgs e)
         {
-            
-           secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+           
             switch (operation)
-            {
+            { 
                 case "x":
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
                     answer = firstvalue * secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "/":
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
                     answer = firstvalue / secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "+":
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
                     answer = firstvalue + secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "-":
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
                     answer = firstvalue - secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
-             }
+                case "^":
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    answer = Math.Pow(10,secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+            }
         }
         private void clearbtn_Click(object sender, EventArgs e)
         {
@@ -177,7 +186,7 @@ namespace ScientificCalculator
         {
             operation = "+";
             firstvalue = Convert.ToDouble(txtboxdisplay.Text);
-            txtboxdisplay.Clear(); 
+            txtboxdisplay.Clear();
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
@@ -197,6 +206,14 @@ namespace ScientificCalculator
         {
             operation = "/";
             firstvalue = Convert.ToDouble(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
+        }
+
+        private void tenraisedbtn_Click(object sender, EventArgs e)
+        {
+            operation = "^";
+            clearzer0();
+            txtboxdisplay.Text = "10^";
             txtboxdisplay.Clear();
         }
     }
