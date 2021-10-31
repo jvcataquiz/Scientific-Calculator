@@ -13,9 +13,9 @@ namespace ScientificCalculator
     public partial class Form1 : Form
     {
         string operation;
-        int firstvalue;
-        int secondvalue;
-        int answer;
+        double firstvalue;
+        double secondvalue;
+        double answer;
 
         public Form1()
         {
@@ -64,7 +64,7 @@ namespace ScientificCalculator
         private void equalbtn_Click(object sender, EventArgs e)
         {
             
-           secondvalue = Convert.ToInt32(txtboxdisplay.Text);
+           secondvalue = Convert.ToDouble(txtboxdisplay.Text);
             switch (operation)
             {
                 case "x":
@@ -94,7 +94,12 @@ namespace ScientificCalculator
         private void decibtn_Click(object sender, EventArgs e)
         {
             clearzer0();
-            txtboxdisplay.Text =  ".";
+           
+                if (!txtboxdisplay.Text.Contains("."))
+                {
+                txtboxdisplay.Text = txtboxdisplay.Text + ".";
+                }
+ 
         }
         private void btnzero_Click(object sender, EventArgs e)
         {
@@ -171,27 +176,27 @@ namespace ScientificCalculator
         private void additionbtn_Click(object sender, EventArgs e)
         {
             operation = "+";
-            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
             txtboxdisplay.Clear(); 
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
             operation = "-";
-            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
             txtboxdisplay.Clear();
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
             operation = "x";
-            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
             txtboxdisplay.Clear();
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
             operation = "/";
-            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
             txtboxdisplay.Clear();
         }
     }
