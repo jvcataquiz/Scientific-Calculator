@@ -72,7 +72,7 @@ namespace ScientificCalculator
             this.factorialbtn = new System.Windows.Forms.Button();
             this.equalbtn = new System.Windows.Forms.Button();
             this.decibtn = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
+            this.btnzero = new System.Windows.Forms.Button();
             this.randbtn = new System.Windows.Forms.Button();
             this.pibtn = new System.Windows.Forms.Button();
             this.tanhbtn = new System.Windows.Forms.Button();
@@ -87,7 +87,6 @@ namespace ScientificCalculator
             this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtboxdisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxdisplay.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtboxdisplay.Enabled = false;
             this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtboxdisplay.ForeColor = System.Drawing.Color.Honeydew;
             this.txtboxdisplay.Location = new System.Drawing.Point(12, 55);
@@ -95,7 +94,7 @@ namespace ScientificCalculator
             this.txtboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
             this.txtboxdisplay.TabIndex = 0;
-            this.txtboxdisplay.Text = "0 ";
+            this.txtboxdisplay.Text = "0";
             this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtboxdisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -406,6 +405,7 @@ namespace ScientificCalculator
             this.btn5.TabIndex = 28;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -525,6 +525,7 @@ namespace ScientificCalculator
             this.btn3.TabIndex = 39;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -538,6 +539,7 @@ namespace ScientificCalculator
             this.btn2.TabIndex = 38;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -551,6 +553,7 @@ namespace ScientificCalculator
             this.btn1.TabIndex = 37;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // EEbtn
             // 
@@ -643,6 +646,7 @@ namespace ScientificCalculator
             this.equalbtn.Text = "=";
             this.equalbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.equalbtn.UseVisualStyleBackColor = false;
+            this.equalbtn.Click += new System.EventHandler(this.equalbtn_Click);
             // 
             // decibtn
             // 
@@ -657,20 +661,21 @@ namespace ScientificCalculator
             this.decibtn.Text = ".";
             this.decibtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.decibtn.UseVisualStyleBackColor = false;
+            this.decibtn.Click += new System.EventHandler(this.decibtn_Click);
             // 
-            // btn0
+            // btnzero
             // 
-            this.btn0.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn0.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn0.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn0.Location = new System.Drawing.Point(456, 401);
-            this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(142, 59);
-            this.btn0.TabIndex = 47;
-            this.btn0.Text = "0";
-            this.btn0.UseVisualStyleBackColor = false;
-            this.btn0.Click += new System.EventHandler(this.button44_Click);
+            this.btnzero.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnzero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnzero.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnzero.ForeColor = System.Drawing.Color.Honeydew;
+            this.btnzero.Location = new System.Drawing.Point(456, 401);
+            this.btnzero.Name = "btnzero";
+            this.btnzero.Size = new System.Drawing.Size(142, 59);
+            this.btnzero.TabIndex = 47;
+            this.btnzero.Text = "0";
+            this.btnzero.UseVisualStyleBackColor = false;
+            this.btnzero.Click += new System.EventHandler(this.btnzero_Click);
             // 
             // randbtn
             // 
@@ -771,7 +776,7 @@ namespace ScientificCalculator
             this.Controls.Add(this.label1);
             this.Controls.Add(this.equalbtn);
             this.Controls.Add(this.decibtn);
-            this.Controls.Add(this.btn0);
+            this.Controls.Add(this.btnzero);
             this.Controls.Add(this.randbtn);
             this.Controls.Add(this.pibtn);
             this.Controls.Add(this.tanhbtn);
@@ -820,7 +825,6 @@ namespace ScientificCalculator
             this.Controls.Add(this.parenthesisopen);
             this.Controls.Add(this.txtboxdisplay);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Enabled = false;
             this.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
@@ -828,7 +832,6 @@ namespace ScientificCalculator
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,7 +882,7 @@ namespace ScientificCalculator
         private System.Windows.Forms.Button factorialbtn;
         private System.Windows.Forms.Button equalbtn;
         private System.Windows.Forms.Button decibtn;
-        private System.Windows.Forms.Button btn0;
+        private System.Windows.Forms.Button btnzero;
         private System.Windows.Forms.Button randbtn;
         private System.Windows.Forms.Button pibtn;
         private System.Windows.Forms.Button tanhbtn;
