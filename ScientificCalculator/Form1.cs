@@ -27,7 +27,7 @@ namespace ScientificCalculator
      
         public void clearzer0()
         {
-            if (txtboxdisplay.Text =="0")
+            if (txtboxdisplay.Text =="0"|| txtboxdisplay.Text == "10^")
             {
                 txtboxdisplay.Clear();
             }
@@ -214,7 +214,6 @@ namespace ScientificCalculator
             operation = "^";
             clearzer0();
             txtboxdisplay.Text = "10^";
-            txtboxdisplay.Clear();
         }
     }
 }
