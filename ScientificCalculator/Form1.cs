@@ -12,10 +12,17 @@ namespace ScientificCalculator
 {
     public partial class Form1 : Form
     {
+        string operation;
+        int firstvalue;
+        int secondvalue;
+        int answer;
+
         public Form1()
         {
             InitializeComponent();
         }
+
+     
         public void clearzer0()
         {
             if (txtboxdisplay.Text =="0")
@@ -23,6 +30,7 @@ namespace ScientificCalculator
                 txtboxdisplay.Clear();
             }
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -55,7 +63,27 @@ namespace ScientificCalculator
 
         private void equalbtn_Click(object sender, EventArgs e)
         {
-
+            
+           secondvalue = Convert.ToInt32(txtboxdisplay.Text);
+            switch (operation)
+            {
+                case "x":
+                    answer = firstvalue * secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "/":
+                    answer = firstvalue / secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "+":
+                    answer = firstvalue + secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "-":
+                    answer = firstvalue - secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+             }
         }
         private void clearbtn_Click(object sender, EventArgs e)
         {
@@ -66,7 +94,7 @@ namespace ScientificCalculator
         private void decibtn_Click(object sender, EventArgs e)
         {
             clearzer0();
-            txtboxdisplay.Text = txtboxdisplay.Text + ".";
+            txtboxdisplay.Text =  ".";
         }
         private void btnzero_Click(object sender, EventArgs e)
         {
@@ -138,6 +166,33 @@ namespace ScientificCalculator
                 txtboxdisplay.Text = txtboxdisplay.Text.Substring(0, txtboxdisplay.Text.Length - 1);
             }
 
+        }
+
+        private void additionbtn_Click(object sender, EventArgs e)
+        {
+            operation = "+";
+            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            txtboxdisplay.Clear(); 
+        }
+
+        private void minusbtn_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
+        }
+        private void multiplicationbtn_Click(object sender, EventArgs e)
+        {
+            operation = "x";
+            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
+        }
+
+        private void divisionbtn_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            firstvalue = Convert.ToInt32(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
         }
     }
 }

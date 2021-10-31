@@ -237,6 +237,7 @@ namespace ScientificCalculator
             this.divisionbtn.Text = "÷";
             this.divisionbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.divisionbtn.UseVisualStyleBackColor = false;
+            this.divisionbtn.Click += new System.EventHandler(this.divisionbtn_Click);
             // 
             // multiplicationbtn
             // 
@@ -251,6 +252,7 @@ namespace ScientificCalculator
             this.multiplicationbtn.Text = "x";
             this.multiplicationbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.multiplicationbtn.UseVisualStyleBackColor = false;
+            this.multiplicationbtn.Click += new System.EventHandler(this.multiplicationbtn_Click);
             // 
             // btn9
             // 
@@ -385,6 +387,7 @@ namespace ScientificCalculator
             this.minusbtn.Text = "-";
             this.minusbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.minusbtn.UseVisualStyleBackColor = false;
+            this.minusbtn.Click += new System.EventHandler(this.minusbtn_Click);
             // 
             // btn6
             // 
@@ -520,6 +523,7 @@ namespace ScientificCalculator
             this.additionbtn.Text = "+";
             this.additionbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.additionbtn.UseVisualStyleBackColor = false;
+            this.additionbtn.Click += new System.EventHandler(this.additionbtn_Click);
             // 
             // btn3
             // 
