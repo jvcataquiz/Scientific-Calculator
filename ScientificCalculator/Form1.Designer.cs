@@ -29,37 +29,37 @@ namespace ScientificCalculator
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.txtboxdisplay = new System.Windows.Forms.TextBox();
+            this.parenthesisopen = new System.Windows.Forms.Button();
+            this.parenthesisclose = new System.Windows.Forms.Button();
+            this.mcbtn = new System.Windows.Forms.Button();
+            this.mrbtn = new System.Windows.Forms.Button();
+            this.mminusbtn = new System.Windows.Forms.Button();
+            this.mplusbtn = new System.Windows.Forms.Button();
+            this.percentagebtn = new System.Windows.Forms.Button();
+            this.cebtn = new System.Windows.Forms.Button();
+            this.clearbtn = new System.Windows.Forms.Button();
+            this.divisionbtn = new System.Windows.Forms.Button();
+            this.multiplicationbtn = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
+            this.tenraisedbtn = new System.Windows.Forms.Button();
+            this.eraisedbtn = new System.Windows.Forms.Button();
+            this.xraisedbtn = new System.Windows.Forms.Button();
+            this.cubebtn = new System.Windows.Forms.Button();
+            this.squarebtn = new System.Windows.Forms.Button();
+            this.secondbtn = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn4 = new System.Windows.Forms.Button();
+            this.logbtn = new System.Windows.Forms.Button();
+            this.lnbtn = new System.Windows.Forms.Button();
+            this.xsquarerootofany = new System.Windows.Forms.Button();
+            this.cuberootbtn = new System.Windows.Forms.Button();
+            this.sqrtbtn = new System.Windows.Forms.Button();
+            this.oneoverxbtn = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
@@ -82,272 +82,295 @@ namespace ScientificCalculator
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtboxdisplay
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Honeydew;
-            this.textBox1.Location = new System.Drawing.Point(12, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(734, 65);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "0 ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtboxdisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtboxdisplay.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtboxdisplay.Enabled = false;
+            this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtboxdisplay.ForeColor = System.Drawing.Color.Honeydew;
+            this.txtboxdisplay.Location = new System.Drawing.Point(12, 55);
+            this.txtboxdisplay.Name = "txtboxdisplay";
+            this.txtboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
+            this.txtboxdisplay.TabIndex = 0;
+            this.txtboxdisplay.Text = "0 ";
+            this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtboxdisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // parenthesisopen
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Honeydew;
-            this.button1.Location = new System.Drawing.Point(12, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 59);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "(";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.parenthesisopen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.parenthesisopen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.parenthesisopen.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.parenthesisopen.ForeColor = System.Drawing.Color.Honeydew;
+            this.parenthesisopen.Location = new System.Drawing.Point(12, 141);
+            this.parenthesisopen.Name = "parenthesisopen";
+            this.parenthesisopen.Size = new System.Drawing.Size(68, 59);
+            this.parenthesisopen.TabIndex = 1;
+            this.parenthesisopen.Text = "(";
+            this.parenthesisopen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.parenthesisopen.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // parenthesisclose
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Honeydew;
-            this.button2.Location = new System.Drawing.Point(86, 141);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 59);
-            this.button2.TabIndex = 2;
-            this.button2.Text = ")";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.parenthesisclose.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.parenthesisclose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.parenthesisclose.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.parenthesisclose.ForeColor = System.Drawing.Color.Honeydew;
+            this.parenthesisclose.Location = new System.Drawing.Point(86, 141);
+            this.parenthesisclose.Name = "parenthesisclose";
+            this.parenthesisclose.Size = new System.Drawing.Size(68, 59);
+            this.parenthesisclose.TabIndex = 2;
+            this.parenthesisclose.Text = ")";
+            this.parenthesisclose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.parenthesisclose.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // mcbtn
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Honeydew;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.Location = new System.Drawing.Point(160, 141);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 59);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "mc";
-            this.button3.UseVisualStyleBackColor = false;
+            this.mcbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mcbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mcbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mcbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.mcbtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.mcbtn.Location = new System.Drawing.Point(160, 141);
+            this.mcbtn.Name = "mcbtn";
+            this.mcbtn.Size = new System.Drawing.Size(68, 59);
+            this.mcbtn.TabIndex = 3;
+            this.mcbtn.Text = "mc";
+            this.mcbtn.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // mrbtn
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Honeydew;
-            this.button4.Location = new System.Drawing.Point(382, 141);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(68, 59);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "mr";
-            this.button4.UseVisualStyleBackColor = false;
+            this.mrbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mrbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mrbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mrbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.mrbtn.Location = new System.Drawing.Point(382, 141);
+            this.mrbtn.Name = "mrbtn";
+            this.mrbtn.Size = new System.Drawing.Size(68, 59);
+            this.mrbtn.TabIndex = 6;
+            this.mrbtn.Text = "mr";
+            this.mrbtn.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // mminusbtn
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Honeydew;
-            this.button5.Location = new System.Drawing.Point(308, 141);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 59);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "m-";
-            this.button5.UseVisualStyleBackColor = false;
+            this.mminusbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mminusbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mminusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mminusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mminusbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.mminusbtn.Location = new System.Drawing.Point(308, 141);
+            this.mminusbtn.Name = "mminusbtn";
+            this.mminusbtn.Size = new System.Drawing.Size(68, 59);
+            this.mminusbtn.TabIndex = 5;
+            this.mminusbtn.Text = "m-";
+            this.mminusbtn.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // mplusbtn
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button6.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.Honeydew;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.Location = new System.Drawing.Point(234, 141);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(68, 59);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "m+";
-            this.button6.UseVisualStyleBackColor = false;
+            this.mplusbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mplusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mplusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mplusbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.mplusbtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.mplusbtn.Location = new System.Drawing.Point(234, 141);
+            this.mplusbtn.Name = "mplusbtn";
+            this.mplusbtn.Size = new System.Drawing.Size(68, 59);
+            this.mplusbtn.TabIndex = 4;
+            this.mplusbtn.Text = "m+";
+            this.mplusbtn.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // percentagebtn
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.Honeydew;
-            this.button7.Location = new System.Drawing.Point(604, 141);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(68, 59);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "%";
-            this.button7.UseVisualStyleBackColor = false;
+            this.percentagebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.percentagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.percentagebtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.percentagebtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.percentagebtn.Location = new System.Drawing.Point(604, 141);
+            this.percentagebtn.Name = "percentagebtn";
+            this.percentagebtn.Size = new System.Drawing.Size(68, 59);
+            this.percentagebtn.TabIndex = 9;
+            this.percentagebtn.Text = "%";
+            this.percentagebtn.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // cebtn
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button8.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.Honeydew;
-            this.button8.Location = new System.Drawing.Point(530, 141);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(68, 59);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "+/-";
-            this.button8.UseVisualStyleBackColor = false;
+            this.cebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cebtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.cebtn.Location = new System.Drawing.Point(530, 141);
+            this.cebtn.Name = "cebtn";
+            this.cebtn.Size = new System.Drawing.Size(68, 59);
+            this.cebtn.TabIndex = 8;
+            this.cebtn.Text = "CE";
+            this.cebtn.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // clearbtn
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button9.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.Honeydew;
-            this.button9.Location = new System.Drawing.Point(456, 141);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(68, 59);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "C";
-            this.button9.UseVisualStyleBackColor = false;
+            this.clearbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clearbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.clearbtn.Location = new System.Drawing.Point(456, 141);
+            this.clearbtn.Name = "clearbtn";
+            this.clearbtn.Size = new System.Drawing.Size(68, 59);
+            this.clearbtn.TabIndex = 7;
+            this.clearbtn.Text = "C";
+            this.clearbtn.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // divisionbtn
             // 
-            this.button10.BackColor = System.Drawing.Color.Gold;
-            this.button10.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.Honeydew;
-            this.button10.Location = new System.Drawing.Point(678, 141);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(68, 59);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "÷";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.UseVisualStyleBackColor = false;
+            this.divisionbtn.BackColor = System.Drawing.Color.Gold;
+            this.divisionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.divisionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.divisionbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.divisionbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.divisionbtn.Location = new System.Drawing.Point(678, 141);
+            this.divisionbtn.Name = "divisionbtn";
+            this.divisionbtn.Size = new System.Drawing.Size(68, 59);
+            this.divisionbtn.TabIndex = 10;
+            this.divisionbtn.Text = "÷";
+            this.divisionbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.divisionbtn.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // multiplicationbtn
             // 
-            this.button11.BackColor = System.Drawing.Color.Gold;
-            this.button11.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Honeydew;
-            this.button11.Location = new System.Drawing.Point(678, 206);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(68, 59);
-            this.button11.TabIndex = 20;
-            this.button11.Text = "x";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.UseVisualStyleBackColor = false;
+            this.multiplicationbtn.BackColor = System.Drawing.Color.Gold;
+            this.multiplicationbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.multiplicationbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.multiplicationbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.multiplicationbtn.Location = new System.Drawing.Point(678, 206);
+            this.multiplicationbtn.Name = "multiplicationbtn";
+            this.multiplicationbtn.Size = new System.Drawing.Size(68, 59);
+            this.multiplicationbtn.TabIndex = 20;
+            this.multiplicationbtn.Text = "x";
+            this.multiplicationbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.multiplicationbtn.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // btn9
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button12.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.ForeColor = System.Drawing.Color.Honeydew;
-            this.button12.Location = new System.Drawing.Point(604, 206);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(68, 59);
-            this.button12.TabIndex = 19;
-            this.button12.Text = "9";
-            this.button12.UseVisualStyleBackColor = false;
+            this.btn9.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn9.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn9.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn9.Location = new System.Drawing.Point(604, 206);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(68, 59);
+            this.btn9.TabIndex = 19;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // btn8
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button13.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button13.ForeColor = System.Drawing.Color.Honeydew;
-            this.button13.Location = new System.Drawing.Point(530, 206);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(68, 59);
-            this.button13.TabIndex = 18;
-            this.button13.Text = "8";
-            this.button13.UseVisualStyleBackColor = false;
+            this.btn8.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn8.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn8.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn8.Location = new System.Drawing.Point(530, 206);
+            this.btn8.Name = "btn8";
+            this.btn8.Size = new System.Drawing.Size(68, 59);
+            this.btn8.TabIndex = 18;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // btn7
             // 
-            this.button14.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button14.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button14.ForeColor = System.Drawing.Color.Honeydew;
-            this.button14.Location = new System.Drawing.Point(456, 206);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(68, 59);
-            this.button14.TabIndex = 17;
-            this.button14.Text = "7";
-            this.button14.UseVisualStyleBackColor = false;
+            this.btn7.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn7.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn7.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn7.Location = new System.Drawing.Point(456, 206);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(68, 59);
+            this.btn7.TabIndex = 17;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // tenraisedbtn
             // 
-            this.button15.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button15.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button15.ForeColor = System.Drawing.Color.Honeydew;
-            this.button15.Location = new System.Drawing.Point(382, 206);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(68, 59);
-            this.button15.TabIndex = 16;
-            this.button15.Text = "10^x";
-            this.button15.UseVisualStyleBackColor = false;
+            this.tenraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tenraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.tenraisedbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tenraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.tenraisedbtn.Location = new System.Drawing.Point(382, 206);
+            this.tenraisedbtn.Name = "tenraisedbtn";
+            this.tenraisedbtn.Size = new System.Drawing.Size(68, 59);
+            this.tenraisedbtn.TabIndex = 16;
+            this.tenraisedbtn.Text = "10^x";
+            this.tenraisedbtn.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // eraisedbtn
             // 
-            this.button16.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button16.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button16.ForeColor = System.Drawing.Color.Honeydew;
-            this.button16.Location = new System.Drawing.Point(308, 206);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(68, 59);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "e^x";
-            this.button16.UseVisualStyleBackColor = false;
+            this.eraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.eraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.eraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.eraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.eraisedbtn.Location = new System.Drawing.Point(308, 206);
+            this.eraisedbtn.Name = "eraisedbtn";
+            this.eraisedbtn.Size = new System.Drawing.Size(68, 59);
+            this.eraisedbtn.TabIndex = 15;
+            this.eraisedbtn.Text = "e^x";
+            this.eraisedbtn.UseVisualStyleBackColor = false;
             // 
-            // button17
+            // xraisedbtn
             // 
-            this.button17.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button17.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button17.ForeColor = System.Drawing.Color.Honeydew;
-            this.button17.Location = new System.Drawing.Point(234, 206);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(68, 59);
-            this.button17.TabIndex = 14;
-            this.button17.Text = "x^y";
-            this.button17.UseVisualStyleBackColor = false;
+            this.xraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.xraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.xraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.xraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.xraisedbtn.Location = new System.Drawing.Point(234, 206);
+            this.xraisedbtn.Name = "xraisedbtn";
+            this.xraisedbtn.Size = new System.Drawing.Size(68, 59);
+            this.xraisedbtn.TabIndex = 14;
+            this.xraisedbtn.Text = "x^y";
+            this.xraisedbtn.UseVisualStyleBackColor = false;
             // 
-            // button18
+            // cubebtn
             // 
-            this.button18.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button18.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button18.ForeColor = System.Drawing.Color.Honeydew;
-            this.button18.Location = new System.Drawing.Point(160, 206);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(68, 59);
-            this.button18.TabIndex = 13;
-            this.button18.Text = "x^3";
-            this.button18.UseVisualStyleBackColor = false;
+            this.cubebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cubebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cubebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cubebtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.cubebtn.Location = new System.Drawing.Point(160, 206);
+            this.cubebtn.Name = "cubebtn";
+            this.cubebtn.Size = new System.Drawing.Size(68, 59);
+            this.cubebtn.TabIndex = 13;
+            this.cubebtn.Text = "x^3";
+            this.cubebtn.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // squarebtn
             // 
-            this.button19.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button19.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button19.ForeColor = System.Drawing.Color.Honeydew;
-            this.button19.Location = new System.Drawing.Point(86, 206);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(68, 59);
-            this.button19.TabIndex = 12;
-            this.button19.Text = "x^2";
-            this.button19.UseVisualStyleBackColor = false;
+            this.squarebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.squarebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.squarebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.squarebtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.squarebtn.Location = new System.Drawing.Point(86, 206);
+            this.squarebtn.Name = "squarebtn";
+            this.squarebtn.Size = new System.Drawing.Size(68, 59);
+            this.squarebtn.TabIndex = 12;
+            this.squarebtn.Text = "x^2";
+            this.squarebtn.UseVisualStyleBackColor = false;
             // 
-            // button20
+            // secondbtn
             // 
-            this.button20.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button20.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button20.ForeColor = System.Drawing.Color.Honeydew;
-            this.button20.Location = new System.Drawing.Point(12, 206);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(68, 59);
-            this.button20.TabIndex = 11;
-            this.button20.Text = "2nd";
-            this.button20.UseVisualStyleBackColor = false;
+            this.secondbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.secondbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.secondbtn.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.secondbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.secondbtn.Location = new System.Drawing.Point(12, 206);
+            this.secondbtn.Name = "secondbtn";
+            this.secondbtn.Size = new System.Drawing.Size(68, 59);
+            this.secondbtn.TabIndex = 11;
+            this.secondbtn.Text = "2nd";
+            this.secondbtn.UseVisualStyleBackColor = false;
             // 
             // button21
             // 
             this.button21.BackColor = System.Drawing.Color.Gold;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button21.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button21.ForeColor = System.Drawing.Color.Honeydew;
             this.button21.Location = new System.Drawing.Point(678, 271);
@@ -358,117 +381,128 @@ namespace ScientificCalculator
             this.button21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button21.UseVisualStyleBackColor = false;
             // 
-            // button22
+            // btn6
             // 
-            this.button22.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button22.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button22.ForeColor = System.Drawing.Color.Honeydew;
-            this.button22.Location = new System.Drawing.Point(604, 271);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(68, 59);
-            this.button22.TabIndex = 29;
-            this.button22.Text = "6";
-            this.button22.UseVisualStyleBackColor = false;
+            this.btn6.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn6.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn6.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn6.Location = new System.Drawing.Point(604, 271);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(68, 59);
+            this.btn6.TabIndex = 29;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // btn5
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button23.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button23.ForeColor = System.Drawing.Color.Honeydew;
-            this.button23.Location = new System.Drawing.Point(530, 271);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(68, 59);
-            this.button23.TabIndex = 28;
-            this.button23.Text = "5";
-            this.button23.UseVisualStyleBackColor = false;
+            this.btn5.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn5.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn5.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn5.Location = new System.Drawing.Point(530, 271);
+            this.btn5.Name = "btn5";
+            this.btn5.Size = new System.Drawing.Size(68, 59);
+            this.btn5.TabIndex = 28;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = false;
             // 
-            // button24
+            // btn4
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button24.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button24.ForeColor = System.Drawing.Color.Honeydew;
-            this.button24.Location = new System.Drawing.Point(456, 271);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(68, 59);
-            this.button24.TabIndex = 27;
-            this.button24.Text = "4";
-            this.button24.UseVisualStyleBackColor = false;
+            this.btn4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn4.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn4.ForeColor = System.Drawing.Color.Honeydew;
+            this.btn4.Location = new System.Drawing.Point(456, 271);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(68, 59);
+            this.btn4.TabIndex = 27;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = false;
             // 
-            // button25
+            // logbtn
             // 
-            this.button25.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button25.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button25.ForeColor = System.Drawing.Color.Honeydew;
-            this.button25.Location = new System.Drawing.Point(382, 271);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(68, 59);
-            this.button25.TabIndex = 26;
-            this.button25.Text = "log10";
-            this.button25.UseVisualStyleBackColor = false;
+            this.logbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.logbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.logbtn.Location = new System.Drawing.Point(382, 271);
+            this.logbtn.Name = "logbtn";
+            this.logbtn.Size = new System.Drawing.Size(68, 59);
+            this.logbtn.TabIndex = 26;
+            this.logbtn.Text = "log10";
+            this.logbtn.UseVisualStyleBackColor = false;
             // 
-            // button26
+            // lnbtn
             // 
-            this.button26.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button26.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button26.ForeColor = System.Drawing.Color.Honeydew;
-            this.button26.Location = new System.Drawing.Point(308, 271);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(68, 59);
-            this.button26.TabIndex = 25;
-            this.button26.Text = "ln";
-            this.button26.UseVisualStyleBackColor = false;
+            this.lnbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lnbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lnbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lnbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.lnbtn.Location = new System.Drawing.Point(308, 271);
+            this.lnbtn.Name = "lnbtn";
+            this.lnbtn.Size = new System.Drawing.Size(68, 59);
+            this.lnbtn.TabIndex = 25;
+            this.lnbtn.Text = "ln";
+            this.lnbtn.UseVisualStyleBackColor = false;
             // 
-            // button27
+            // xsquarerootofany
             // 
-            this.button27.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button27.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button27.ForeColor = System.Drawing.Color.Honeydew;
-            this.button27.Location = new System.Drawing.Point(234, 271);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(68, 59);
-            this.button27.TabIndex = 24;
-            this.button27.Text = " x√y";
-            this.button27.UseVisualStyleBackColor = false;
+            this.xsquarerootofany.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.xsquarerootofany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.xsquarerootofany.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.xsquarerootofany.ForeColor = System.Drawing.Color.Honeydew;
+            this.xsquarerootofany.Location = new System.Drawing.Point(234, 271);
+            this.xsquarerootofany.Name = "xsquarerootofany";
+            this.xsquarerootofany.Size = new System.Drawing.Size(68, 59);
+            this.xsquarerootofany.TabIndex = 24;
+            this.xsquarerootofany.Text = " x√y";
+            this.xsquarerootofany.UseVisualStyleBackColor = false;
             // 
-            // button28
+            // cuberootbtn
             // 
-            this.button28.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button28.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button28.ForeColor = System.Drawing.Color.Honeydew;
-            this.button28.Location = new System.Drawing.Point(160, 271);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(68, 59);
-            this.button28.TabIndex = 23;
-            this.button28.Text = "3√x";
-            this.button28.UseVisualStyleBackColor = false;
+            this.cuberootbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cuberootbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cuberootbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cuberootbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.cuberootbtn.Location = new System.Drawing.Point(160, 271);
+            this.cuberootbtn.Name = "cuberootbtn";
+            this.cuberootbtn.Size = new System.Drawing.Size(68, 59);
+            this.cuberootbtn.TabIndex = 23;
+            this.cuberootbtn.Text = "3√x";
+            this.cuberootbtn.UseVisualStyleBackColor = false;
+            this.cuberootbtn.Click += new System.EventHandler(this.button28_Click);
             // 
-            // button29
+            // sqrtbtn
             // 
-            this.button29.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button29.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button29.ForeColor = System.Drawing.Color.Honeydew;
-            this.button29.Location = new System.Drawing.Point(86, 271);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(68, 59);
-            this.button29.TabIndex = 22;
-            this.button29.Text = " 2√x";
-            this.button29.UseVisualStyleBackColor = false;
+            this.sqrtbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sqrtbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sqrtbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.sqrtbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.sqrtbtn.Location = new System.Drawing.Point(86, 271);
+            this.sqrtbtn.Name = "sqrtbtn";
+            this.sqrtbtn.Size = new System.Drawing.Size(68, 59);
+            this.sqrtbtn.TabIndex = 22;
+            this.sqrtbtn.Text = " 2√x";
+            this.sqrtbtn.UseVisualStyleBackColor = false;
             // 
-            // button30
+            // oneoverxbtn
             // 
-            this.button30.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button30.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button30.ForeColor = System.Drawing.Color.Honeydew;
-            this.button30.Location = new System.Drawing.Point(12, 271);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(68, 59);
-            this.button30.TabIndex = 21;
-            this.button30.Text = "1/x";
-            this.button30.UseVisualStyleBackColor = false;
+            this.oneoverxbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.oneoverxbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.oneoverxbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.oneoverxbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.oneoverxbtn.Location = new System.Drawing.Point(12, 271);
+            this.oneoverxbtn.Name = "oneoverxbtn";
+            this.oneoverxbtn.Size = new System.Drawing.Size(68, 59);
+            this.oneoverxbtn.TabIndex = 21;
+            this.oneoverxbtn.Text = "1/x";
+            this.oneoverxbtn.UseVisualStyleBackColor = false;
             // 
             // button31
             // 
             this.button31.BackColor = System.Drawing.Color.Gold;
+            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button31.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button31.ForeColor = System.Drawing.Color.Honeydew;
             this.button31.Location = new System.Drawing.Point(678, 336);
@@ -482,6 +516,7 @@ namespace ScientificCalculator
             // button32
             // 
             this.button32.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button32.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button32.ForeColor = System.Drawing.Color.Honeydew;
             this.button32.Location = new System.Drawing.Point(604, 336);
@@ -494,6 +529,7 @@ namespace ScientificCalculator
             // button33
             // 
             this.button33.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button33.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button33.ForeColor = System.Drawing.Color.Honeydew;
             this.button33.Location = new System.Drawing.Point(530, 336);
@@ -506,6 +542,7 @@ namespace ScientificCalculator
             // button34
             // 
             this.button34.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button34.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button34.ForeColor = System.Drawing.Color.Honeydew;
             this.button34.Location = new System.Drawing.Point(456, 336);
@@ -518,6 +555,7 @@ namespace ScientificCalculator
             // button35
             // 
             this.button35.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button35.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button35.ForeColor = System.Drawing.Color.Honeydew;
             this.button35.Location = new System.Drawing.Point(382, 336);
@@ -530,6 +568,7 @@ namespace ScientificCalculator
             // button36
             // 
             this.button36.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button36.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button36.ForeColor = System.Drawing.Color.Honeydew;
             this.button36.Location = new System.Drawing.Point(308, 336);
@@ -542,6 +581,7 @@ namespace ScientificCalculator
             // button37
             // 
             this.button37.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button37.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button37.ForeColor = System.Drawing.Color.Honeydew;
             this.button37.Location = new System.Drawing.Point(234, 336);
@@ -554,6 +594,7 @@ namespace ScientificCalculator
             // button38
             // 
             this.button38.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button38.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button38.ForeColor = System.Drawing.Color.Honeydew;
             this.button38.Location = new System.Drawing.Point(160, 336);
@@ -566,6 +607,7 @@ namespace ScientificCalculator
             // button39
             // 
             this.button39.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button39.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button39.ForeColor = System.Drawing.Color.Honeydew;
             this.button39.Location = new System.Drawing.Point(86, 336);
@@ -578,6 +620,7 @@ namespace ScientificCalculator
             // button40
             // 
             this.button40.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button40.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button40.ForeColor = System.Drawing.Color.Honeydew;
             this.button40.Location = new System.Drawing.Point(12, 336);
@@ -590,6 +633,7 @@ namespace ScientificCalculator
             // button41
             // 
             this.button41.BackColor = System.Drawing.Color.Gold;
+            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button41.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button41.ForeColor = System.Drawing.Color.Honeydew;
             this.button41.Location = new System.Drawing.Point(678, 401);
@@ -603,6 +647,7 @@ namespace ScientificCalculator
             // button42
             // 
             this.button42.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button42.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button42.ForeColor = System.Drawing.Color.Honeydew;
             this.button42.Location = new System.Drawing.Point(604, 401);
@@ -616,6 +661,7 @@ namespace ScientificCalculator
             // button44
             // 
             this.button44.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button44.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button44.ForeColor = System.Drawing.Color.Honeydew;
             this.button44.Location = new System.Drawing.Point(456, 401);
@@ -628,6 +674,7 @@ namespace ScientificCalculator
             // button45
             // 
             this.button45.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button45.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button45.ForeColor = System.Drawing.Color.Honeydew;
             this.button45.Location = new System.Drawing.Point(382, 401);
@@ -640,6 +687,7 @@ namespace ScientificCalculator
             // button46
             // 
             this.button46.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button46.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button46.ForeColor = System.Drawing.Color.Honeydew;
             this.button46.Location = new System.Drawing.Point(308, 401);
@@ -652,6 +700,7 @@ namespace ScientificCalculator
             // button47
             // 
             this.button47.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button47.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button47.ForeColor = System.Drawing.Color.Honeydew;
             this.button47.Location = new System.Drawing.Point(234, 401);
@@ -664,7 +713,8 @@ namespace ScientificCalculator
             // button48
             // 
             this.button48.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button48.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button48.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button48.Font = new System.Drawing.Font("Tahoma", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button48.ForeColor = System.Drawing.Color.Honeydew;
             this.button48.Location = new System.Drawing.Point(160, 401);
             this.button48.Name = "button48";
@@ -676,6 +726,7 @@ namespace ScientificCalculator
             // button49
             // 
             this.button49.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button49.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button49.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button49.ForeColor = System.Drawing.Color.Honeydew;
             this.button49.Location = new System.Drawing.Point(86, 401);
@@ -688,6 +739,7 @@ namespace ScientificCalculator
             // button50
             // 
             this.button50.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button50.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button50.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button50.ForeColor = System.Drawing.Color.Honeydew;
             this.button50.Location = new System.Drawing.Point(12, 401);
@@ -736,45 +788,46 @@ namespace ScientificCalculator
             this.Controls.Add(this.button39);
             this.Controls.Add(this.button40);
             this.Controls.Add(this.button21);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.button23);
-            this.Controls.Add(this.button24);
-            this.Controls.Add(this.button25);
-            this.Controls.Add(this.button26);
-            this.Controls.Add(this.button27);
-            this.Controls.Add(this.button28);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.button30);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button13);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button17);
-            this.Controls.Add(this.button18);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Controls.Add(this.btn6);
+            this.Controls.Add(this.btn5);
+            this.Controls.Add(this.btn4);
+            this.Controls.Add(this.logbtn);
+            this.Controls.Add(this.lnbtn);
+            this.Controls.Add(this.xsquarerootofany);
+            this.Controls.Add(this.cuberootbtn);
+            this.Controls.Add(this.sqrtbtn);
+            this.Controls.Add(this.oneoverxbtn);
+            this.Controls.Add(this.multiplicationbtn);
+            this.Controls.Add(this.btn9);
+            this.Controls.Add(this.btn8);
+            this.Controls.Add(this.btn7);
+            this.Controls.Add(this.tenraisedbtn);
+            this.Controls.Add(this.eraisedbtn);
+            this.Controls.Add(this.xraisedbtn);
+            this.Controls.Add(this.cubebtn);
+            this.Controls.Add(this.squarebtn);
+            this.Controls.Add(this.secondbtn);
+            this.Controls.Add(this.divisionbtn);
+            this.Controls.Add(this.percentagebtn);
+            this.Controls.Add(this.cebtn);
+            this.Controls.Add(this.clearbtn);
+            this.Controls.Add(this.mrbtn);
+            this.Controls.Add(this.mminusbtn);
+            this.Controls.Add(this.mplusbtn);
+            this.Controls.Add(this.mcbtn);
+            this.Controls.Add(this.parenthesisclose);
+            this.Controls.Add(this.parenthesisopen);
+            this.Controls.Add(this.txtboxdisplay);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Enabled = false;
             this.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Opacity = 0.97D;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -782,37 +835,37 @@ namespace ScientificCalculator
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.TextBox txtboxdisplay;
+        private System.Windows.Forms.Button parenthesisopen;
+        private System.Windows.Forms.Button parenthesisclose;
+        private System.Windows.Forms.Button mcbtn;
+        private System.Windows.Forms.Button mrbtn;
+        private System.Windows.Forms.Button mminusbtn;
+        private System.Windows.Forms.Button mplusbtn;
+        private System.Windows.Forms.Button percentagebtn;
+        private System.Windows.Forms.Button cebtn;
+        private System.Windows.Forms.Button clearbtn;
+        private System.Windows.Forms.Button divisionbtn;
+        private System.Windows.Forms.Button multiplicationbtn;
+        private System.Windows.Forms.Button btn9;
+        private System.Windows.Forms.Button btn8;
+        private System.Windows.Forms.Button btn7;
+        private System.Windows.Forms.Button tenraisedbtn;
+        private System.Windows.Forms.Button eraisedbtn;
+        private System.Windows.Forms.Button xraisedbtn;
+        private System.Windows.Forms.Button cubebtn;
+        private System.Windows.Forms.Button squarebtn;
+        private System.Windows.Forms.Button secondbtn;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn4;
+        private System.Windows.Forms.Button logbtn;
+        private System.Windows.Forms.Button lnbtn;
+        private System.Windows.Forms.Button xsquarerootofany;
+        private System.Windows.Forms.Button cuberootbtn;
+        private System.Windows.Forms.Button sqrtbtn;
+        private System.Windows.Forms.Button oneoverxbtn;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button33;

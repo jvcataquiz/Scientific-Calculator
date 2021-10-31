@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jv Cataquiz\\source\\repos\\ScientificCalculator\\ScientificCalculator.csproj",
+      "projectUniqueName": "C:\\Users\\Jv Cataquiz\\source\\repos\\Assignment2\\ScientificCalculator\\ScientificCalculator.csproj",
       "projectName": "ScientificCalculator",
-      "projectPath": "C:\\Users\\Jv Cataquiz\\source\\repos\\ScientificCalculator\\ScientificCalculator.csproj",
+      "projectPath": "C:\\Users\\Jv Cataquiz\\source\\repos\\Assignment2\\ScientificCalculator\\ScientificCalculator.csproj",
       "packagesPath": "C:\\Users\\Jv Cataquiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jv Cataquiz\\source\\repos\\ScientificCalculator\\obj\\",
+      "outputPath": "C:\\Users\\Jv Cataquiz\\source\\repos\\Assignment2\\ScientificCalculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
