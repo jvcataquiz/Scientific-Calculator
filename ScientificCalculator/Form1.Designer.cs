@@ -80,24 +80,24 @@ namespace ScientificCalculator
             this.sinhbtn = new System.Windows.Forms.Button();
             this.Radbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.radiobtnon = new System.Windows.Forms.RadioButton();
+            this.radiobtnoff = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // txtboxdisplay
             // 
-            this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtboxdisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxdisplay.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtboxdisplay.Enabled = false;
             this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtboxdisplay.ForeColor = System.Drawing.Color.Honeydew;
+            this.txtboxdisplay.ForeColor = System.Drawing.Color.Black;
             this.txtboxdisplay.Location = new System.Drawing.Point(12, 55);
             this.txtboxdisplay.Name = "txtboxdisplay";
             this.txtboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
             this.txtboxdisplay.TabIndex = 0;
-            this.txtboxdisplay.Text = "0";
             this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtboxdisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtboxdisplay.TextChanged += new System.EventHandler(this.txtboxdisplay_TextChanged);
             // 
             // parenthesisopen
             // 
@@ -715,6 +715,7 @@ namespace ScientificCalculator
             this.pibtn.TabIndex = 45;
             this.pibtn.Text = "π";
             this.pibtn.UseVisualStyleBackColor = false;
+            this.pibtn.Click += new System.EventHandler(this.pibtn_Click);
             // 
             // tanhbtn
             // 
@@ -779,13 +780,44 @@ namespace ScientificCalculator
             this.label1.Text = "KALYO ®";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // radiobtnon
+            // 
+            this.radiobtnon.AutoSize = true;
+            this.radiobtnon.BackColor = System.Drawing.Color.Red;
+            this.radiobtnon.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnon.Location = new System.Drawing.Point(587, 10);
+            this.radiobtnon.Name = "radiobtnon";
+            this.radiobtnon.Size = new System.Drawing.Size(65, 35);
+            this.radiobtnon.TabIndex = 52;
+            this.radiobtnon.TabStop = true;
+            this.radiobtnon.Text = "ON";
+            this.radiobtnon.UseVisualStyleBackColor = false;
+            this.radiobtnon.CheckedChanged += new System.EventHandler(this.radiobtnon_CheckedChanged);
+            // 
+            // radiobtnoff
+            // 
+            this.radiobtnoff.AutoSize = true;
+            this.radiobtnoff.BackColor = System.Drawing.Color.Red;
+            this.radiobtnoff.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnoff.Location = new System.Drawing.Point(666, 10);
+            this.radiobtnoff.Name = "radiobtnoff";
+            this.radiobtnoff.Size = new System.Drawing.Size(77, 35);
+            this.radiobtnoff.TabIndex = 53;
+            this.radiobtnoff.TabStop = true;
+            this.radiobtnoff.Text = "OFF";
+            this.radiobtnoff.UseVisualStyleBackColor = false;
+            this.radiobtnoff.CheckedChanged += new System.EventHandler(this.radiobtnoff_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(758, 480);
+            this.ClientSize = new System.Drawing.Size(752, 466);
+            this.ControlBox = false;
+            this.Controls.Add(this.radiobtnoff);
+            this.Controls.Add(this.radiobtnon);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.equalbtn);
             this.Controls.Add(this.decibtn);
@@ -843,6 +875,7 @@ namespace ScientificCalculator
             this.Name = "Form1";
             this.Opacity = 0.97D;
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
             this.ResumeLayout(false);
@@ -903,6 +936,8 @@ namespace ScientificCalculator
         private System.Windows.Forms.Button sinhbtn;
         private System.Windows.Forms.Button Radbtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radiobtnon;
+        private System.Windows.Forms.RadioButton radiobtnoff;
     }
 }
 

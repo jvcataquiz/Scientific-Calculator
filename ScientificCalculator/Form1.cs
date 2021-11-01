@@ -33,8 +33,9 @@ namespace ScientificCalculator
             }
         }
         
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtboxdisplay_TextChanged(object sender, EventArgs e)
         {
+
 
         }
 
@@ -214,6 +215,24 @@ namespace ScientificCalculator
             operation = "^";
             clearzer0();
             txtboxdisplay.Text = "10^";
+        }
+
+        private void pibtn_Click(object sender, EventArgs e)
+        {
+            answer = Math.PI;
+            txtboxdisplay.Text = answer.ToString();
+        }
+
+        private void radiobtnon_CheckedChanged(object sender, EventArgs e)
+        {
+        this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+        
+
+        }
+
+        private void radiobtnoff_CheckedChanged(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
