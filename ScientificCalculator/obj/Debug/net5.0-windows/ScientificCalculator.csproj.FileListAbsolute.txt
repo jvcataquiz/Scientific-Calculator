@@ -24,7 +24,6 @@ C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\bin\Debug\net
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\bin\Debug\net5.0-windows\ref\ScientificCalculator.dll
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\bin\Debug\net5.0-windows\ScientificCalculator.pdb
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.csproj.AssemblyReference.cache
-C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.Form1.resources
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.csproj.GenerateResource.cache
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.AssemblyInfoInputs.cache
@@ -34,3 +33,6 @@ C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ref\ScientificCalculator.dll
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.pdb
 C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.genruntimeconfig.cache
+C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.Calcu.resources
+C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator._Opening.resources
+C:\Users\Jv Cataquiz\source\repos\Assignment2\ScientificCalculator\obj\Debug\net5.0-windows\ScientificCalculator.Properties.Resources.resources

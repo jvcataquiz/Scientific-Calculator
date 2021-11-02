@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ScientificCalculator
 {
-    public partial class Form1 : Form
+    public partial class Calcu : Form
     {
         string operation;
         double firstvalue;
@@ -19,7 +19,7 @@ namespace ScientificCalculator
       
       
 
-        public Form1()
+        public Calcu()
         {
             InitializeComponent();
         }
@@ -233,6 +233,11 @@ namespace ScientificCalculator
         private void radiobtnoff_CheckedChanged(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Calcu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

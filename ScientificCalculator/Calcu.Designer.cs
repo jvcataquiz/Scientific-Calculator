@@ -1,7 +1,7 @@
 ﻿
 namespace ScientificCalculator
 {
-    partial class Form1
+    partial class Calcu
     {
         /// <summary>
         ///  Required designer variable.
@@ -808,13 +808,13 @@ namespace ScientificCalculator
             this.radiobtnoff.UseVisualStyleBackColor = false;
             this.radiobtnoff.CheckedChanged += new System.EventHandler(this.radiobtnoff_CheckedChanged);
             // 
-            // Form1
+            // Calcu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(752, 466);
+            this.ClientSize = new System.Drawing.Size(748, 462);
             this.ControlBox = false;
             this.Controls.Add(this.radiobtnoff);
             this.Controls.Add(this.radiobtnon);
@@ -872,12 +872,13 @@ namespace ScientificCalculator
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Form1";
+            this.Name = "Calcu";
             this.Opacity = 0.97D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
+            this.Load += new System.EventHandler(this.Calcu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
