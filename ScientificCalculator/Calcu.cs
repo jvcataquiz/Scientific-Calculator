@@ -26,8 +26,7 @@ namespace ScientificCalculator
         {
 
             this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.equation.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.equation.Enabled = true;
+            
             this.txtboxdisplay.Enabled = true;
             this.parenthesisopen.Enabled = true;
             this.parenthesisclose.Enabled = true;
