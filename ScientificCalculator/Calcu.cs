@@ -298,6 +298,31 @@ namespace ScientificCalculator
                     answer = Math.Pow(10, secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
+                case "^2":
+                    parts = txtboxdisplay.Text.Split("^2");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    answer = Math.Pow(firstvalue,2);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "^3":
+                    parts = txtboxdisplay.Text.Split("^3");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    answer = Math.Pow(firstvalue, 3);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "^*":
+                    parts = txtboxdisplay.Text.Split("^*");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Pow(firstvalue, secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "e^":
+                    parts = txtboxdisplay.Text.Split("e^");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Pow(2.71828, secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
             }
         }
         private void tenraisedbtn_Click(object sender, EventArgs e)
@@ -323,6 +348,50 @@ namespace ScientificCalculator
         private void Calcu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void squarebtn_Click(object sender, EventArgs e)
+        {
+            operation = "^2";
+            if (!txtboxdisplay.Text.Contains("^2"))
+            {
+                clearzer0();
+
+                txtboxdisplay.Text = txtboxdisplay.Text + "^2";
+            }
+        }
+
+        private void cubebtn_Click(object sender, EventArgs e)
+        {
+            operation = "^3";
+            if (!txtboxdisplay.Text.Contains("^3"))
+            {
+                clearzer0();
+
+                txtboxdisplay.Text = txtboxdisplay.Text + "^3";
+            }
+        }
+
+        private void xraisedbtn_Click(object sender, EventArgs e)
+        {
+            operation = "^*";
+            if (!txtboxdisplay.Text.Contains("^*"))
+            {
+                clearzer0();
+
+                txtboxdisplay.Text = txtboxdisplay.Text + "^*";
+            }
+        }
+
+        private void eraisedbtn_Click(object sender, EventArgs e)
+        {
+            operation = "e^";
+            if (!txtboxdisplay.Text.Contains("e*"))
+            {
+                clearzer0();
+
+                txtboxdisplay.Text = "e^" + txtboxdisplay.Text;
+            }
         }
     }
 }

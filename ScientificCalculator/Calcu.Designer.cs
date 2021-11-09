@@ -339,6 +339,7 @@ namespace ScientificCalculator
             this.eraisedbtn.TabIndex = 15;
             this.eraisedbtn.Text = "e^x";
             this.eraisedbtn.UseVisualStyleBackColor = false;
+            this.eraisedbtn.Click += new System.EventHandler(this.eraisedbtn_Click);
             // 
             // xraisedbtn
             // 
@@ -353,6 +354,7 @@ namespace ScientificCalculator
             this.xraisedbtn.TabIndex = 14;
             this.xraisedbtn.Text = "x^y";
             this.xraisedbtn.UseVisualStyleBackColor = false;
+            this.xraisedbtn.Click += new System.EventHandler(this.xraisedbtn_Click);
             // 
             // cubebtn
             // 
@@ -367,6 +369,7 @@ namespace ScientificCalculator
             this.cubebtn.TabIndex = 13;
             this.cubebtn.Text = "x^3";
             this.cubebtn.UseVisualStyleBackColor = false;
+            this.cubebtn.Click += new System.EventHandler(this.cubebtn_Click);
             // 
             // squarebtn
             // 
@@ -381,6 +384,7 @@ namespace ScientificCalculator
             this.squarebtn.TabIndex = 12;
             this.squarebtn.Text = "x^2";
             this.squarebtn.UseVisualStyleBackColor = false;
+            this.squarebtn.Click += new System.EventHandler(this.squarebtn_Click);
             // 
             // secondbtn
             // 
