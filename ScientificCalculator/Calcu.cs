@@ -218,29 +218,44 @@ namespace ScientificCalculator
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
-            txtboxdisplay.Text = txtboxdisplay.Text + "+";
+           
             operation = "+";
-
+            if (!txtboxdisplay.Text.Contains("+"))
+            {
+                txtboxdisplay.Text = txtboxdisplay.Text + "+";
+            }
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
-            txtboxdisplay.Text = txtboxdisplay.Text + "-";
-            operation = "-";
             
+            operation = "-";
+            if (!txtboxdisplay.Text.Contains("-"))
+            {
+                txtboxdisplay.Text = txtboxdisplay.Text + "-";
+            }
+
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
-            txtboxdisplay.Text = txtboxdisplay.Text + "x";
+           
             operation = "x";
-            
+            if (!txtboxdisplay.Text.Contains("x"))
+            {
+                txtboxdisplay.Text = txtboxdisplay.Text + "x";
+            }
+
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
-            txtboxdisplay.Text = txtboxdisplay.Text + "/";
+            
             operation = "/";
-          
+            if (!txtboxdisplay.Text.Contains("/"))
+            {
+                txtboxdisplay.Text = txtboxdisplay.Text + "/";
+            }
+
         }
 
         private void equalbtn_Click(object sender, EventArgs e)
@@ -278,7 +293,8 @@ namespace ScientificCalculator
                     txtboxdisplay.Text =  Convert.ToString(answer);
                     break;
                 case "^":
-                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    parts = txtboxdisplay.Text.Split("^");
+                    secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Pow(10, secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
@@ -287,8 +303,13 @@ namespace ScientificCalculator
         private void tenraisedbtn_Click(object sender, EventArgs e)
         {
             operation = "^";
-            clearzer0();
-            txtboxdisplay.Text = "10^";
+            if (!txtboxdisplay.Text.Contains("^"))
+            {
+                clearzer0();
+
+                txtboxdisplay.Text =   "10 ^" + txtboxdisplay.Text;
+            }
+           
         }
 
         private void pibtn_Click(object sender, EventArgs e)
