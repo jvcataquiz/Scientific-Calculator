@@ -89,6 +89,7 @@ namespace ScientificCalculator
             this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtboxdisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxdisplay.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtboxdisplay.Enabled = false;
             this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtboxdisplay.ForeColor = System.Drawing.Color.Black;
             this.txtboxdisplay.Location = new System.Drawing.Point(12, 55);
@@ -102,6 +103,7 @@ namespace ScientificCalculator
             // parenthesisopen
             // 
             this.parenthesisopen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.parenthesisopen.Enabled = false;
             this.parenthesisopen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.parenthesisopen.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parenthesisopen.ForeColor = System.Drawing.Color.Honeydew;
@@ -116,6 +118,7 @@ namespace ScientificCalculator
             // parenthesisclose
             // 
             this.parenthesisclose.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.parenthesisclose.Enabled = false;
             this.parenthesisclose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.parenthesisclose.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parenthesisclose.ForeColor = System.Drawing.Color.Honeydew;
@@ -130,6 +133,7 @@ namespace ScientificCalculator
             // mcbtn
             // 
             this.mcbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mcbtn.Enabled = false;
             this.mcbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mcbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mcbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -144,6 +148,7 @@ namespace ScientificCalculator
             // mrbtn
             // 
             this.mrbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mrbtn.Enabled = false;
             this.mrbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mrbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mrbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -158,6 +163,7 @@ namespace ScientificCalculator
             // 
             this.mminusbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.mminusbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mminusbtn.Enabled = false;
             this.mminusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mminusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mminusbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -171,6 +177,7 @@ namespace ScientificCalculator
             // mplusbtn
             // 
             this.mplusbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.mplusbtn.Enabled = false;
             this.mplusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mplusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mplusbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -185,6 +192,7 @@ namespace ScientificCalculator
             // percentagebtn
             // 
             this.percentagebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.percentagebtn.Enabled = false;
             this.percentagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.percentagebtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.percentagebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -198,6 +206,7 @@ namespace ScientificCalculator
             // cebtn
             // 
             this.cebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cebtn.Enabled = false;
             this.cebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -212,6 +221,7 @@ namespace ScientificCalculator
             // clearbtn
             // 
             this.clearbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.clearbtn.Enabled = false;
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clearbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -227,6 +237,7 @@ namespace ScientificCalculator
             // 
             this.divisionbtn.BackColor = System.Drawing.Color.Gold;
             this.divisionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.divisionbtn.Enabled = false;
             this.divisionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.divisionbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.divisionbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -242,6 +253,7 @@ namespace ScientificCalculator
             // multiplicationbtn
             // 
             this.multiplicationbtn.BackColor = System.Drawing.Color.Gold;
+            this.multiplicationbtn.Enabled = false;
             this.multiplicationbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.multiplicationbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.multiplicationbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -257,6 +269,7 @@ namespace ScientificCalculator
             // btn9
             // 
             this.btn9.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn9.Enabled = false;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn9.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn9.ForeColor = System.Drawing.Color.Honeydew;
@@ -271,6 +284,7 @@ namespace ScientificCalculator
             // btn8
             // 
             this.btn8.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn8.Enabled = false;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn8.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn8.ForeColor = System.Drawing.Color.Honeydew;
@@ -285,6 +299,7 @@ namespace ScientificCalculator
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn7.Enabled = false;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn7.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn7.ForeColor = System.Drawing.Color.Honeydew;
@@ -299,6 +314,7 @@ namespace ScientificCalculator
             // tenraisedbtn
             // 
             this.tenraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tenraisedbtn.Enabled = false;
             this.tenraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tenraisedbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tenraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -313,6 +329,7 @@ namespace ScientificCalculator
             // eraisedbtn
             // 
             this.eraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.eraisedbtn.Enabled = false;
             this.eraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.eraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.eraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -326,6 +343,7 @@ namespace ScientificCalculator
             // xraisedbtn
             // 
             this.xraisedbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.xraisedbtn.Enabled = false;
             this.xraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.xraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.xraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -339,6 +357,7 @@ namespace ScientificCalculator
             // cubebtn
             // 
             this.cubebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cubebtn.Enabled = false;
             this.cubebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cubebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cubebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -352,6 +371,7 @@ namespace ScientificCalculator
             // squarebtn
             // 
             this.squarebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.squarebtn.Enabled = false;
             this.squarebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.squarebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.squarebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -365,6 +385,7 @@ namespace ScientificCalculator
             // secondbtn
             // 
             this.secondbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.secondbtn.Enabled = false;
             this.secondbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.secondbtn.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.secondbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -378,6 +399,7 @@ namespace ScientificCalculator
             // minusbtn
             // 
             this.minusbtn.BackColor = System.Drawing.Color.Gold;
+            this.minusbtn.Enabled = false;
             this.minusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minusbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.minusbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -393,6 +415,7 @@ namespace ScientificCalculator
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn6.Enabled = false;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn6.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn6.ForeColor = System.Drawing.Color.Honeydew;
@@ -407,6 +430,7 @@ namespace ScientificCalculator
             // btn5
             // 
             this.btn5.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn5.Enabled = false;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn5.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn5.ForeColor = System.Drawing.Color.Honeydew;
@@ -421,6 +445,7 @@ namespace ScientificCalculator
             // btn4
             // 
             this.btn4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn4.Enabled = false;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn4.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn4.ForeColor = System.Drawing.Color.Honeydew;
@@ -435,6 +460,7 @@ namespace ScientificCalculator
             // logbtn
             // 
             this.logbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.logbtn.Enabled = false;
             this.logbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.logbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -448,6 +474,7 @@ namespace ScientificCalculator
             // lnbtn
             // 
             this.lnbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lnbtn.Enabled = false;
             this.lnbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lnbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lnbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -461,6 +488,7 @@ namespace ScientificCalculator
             // xsquarerootofany
             // 
             this.xsquarerootofany.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.xsquarerootofany.Enabled = false;
             this.xsquarerootofany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.xsquarerootofany.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.xsquarerootofany.ForeColor = System.Drawing.Color.Honeydew;
@@ -474,6 +502,7 @@ namespace ScientificCalculator
             // cuberootbtn
             // 
             this.cuberootbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cuberootbtn.Enabled = false;
             this.cuberootbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cuberootbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cuberootbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -488,6 +517,7 @@ namespace ScientificCalculator
             // sqrtbtn
             // 
             this.sqrtbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sqrtbtn.Enabled = false;
             this.sqrtbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sqrtbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sqrtbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -501,6 +531,7 @@ namespace ScientificCalculator
             // oneoverxbtn
             // 
             this.oneoverxbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.oneoverxbtn.Enabled = false;
             this.oneoverxbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.oneoverxbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oneoverxbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -514,6 +545,7 @@ namespace ScientificCalculator
             // additionbtn
             // 
             this.additionbtn.BackColor = System.Drawing.Color.Gold;
+            this.additionbtn.Enabled = false;
             this.additionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.additionbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.additionbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -529,6 +561,7 @@ namespace ScientificCalculator
             // btn3
             // 
             this.btn3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn3.Enabled = false;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn3.ForeColor = System.Drawing.Color.Honeydew;
@@ -543,6 +576,7 @@ namespace ScientificCalculator
             // btn2
             // 
             this.btn2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn2.Enabled = false;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn2.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn2.ForeColor = System.Drawing.Color.Honeydew;
@@ -557,6 +591,7 @@ namespace ScientificCalculator
             // btn1
             // 
             this.btn1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn1.Enabled = false;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn1.ForeColor = System.Drawing.Color.Honeydew;
@@ -571,6 +606,7 @@ namespace ScientificCalculator
             // EEbtn
             // 
             this.EEbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EEbtn.Enabled = false;
             this.EEbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EEbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EEbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -584,6 +620,7 @@ namespace ScientificCalculator
             // ebtn
             // 
             this.ebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ebtn.Enabled = false;
             this.ebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -597,6 +634,7 @@ namespace ScientificCalculator
             // tanbtn
             // 
             this.tanbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tanbtn.Enabled = false;
             this.tanbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tanbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tanbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -610,6 +648,7 @@ namespace ScientificCalculator
             // cosinebtn
             // 
             this.cosinebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cosinebtn.Enabled = false;
             this.cosinebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cosinebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cosinebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -623,6 +662,7 @@ namespace ScientificCalculator
             // sinebtn
             // 
             this.sinebtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sinebtn.Enabled = false;
             this.sinebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sinebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sinebtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -636,6 +676,7 @@ namespace ScientificCalculator
             // factorialbtn
             // 
             this.factorialbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.factorialbtn.Enabled = false;
             this.factorialbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.factorialbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.factorialbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -649,6 +690,7 @@ namespace ScientificCalculator
             // equalbtn
             // 
             this.equalbtn.BackColor = System.Drawing.Color.Gold;
+            this.equalbtn.Enabled = false;
             this.equalbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.equalbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.equalbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -664,6 +706,7 @@ namespace ScientificCalculator
             // decibtn
             // 
             this.decibtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.decibtn.Enabled = false;
             this.decibtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.decibtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.decibtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -679,6 +722,7 @@ namespace ScientificCalculator
             // btnzero
             // 
             this.btnzero.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnzero.Enabled = false;
             this.btnzero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnzero.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnzero.ForeColor = System.Drawing.Color.Honeydew;
@@ -693,6 +737,7 @@ namespace ScientificCalculator
             // randbtn
             // 
             this.randbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.randbtn.Enabled = false;
             this.randbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.randbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.randbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -706,6 +751,7 @@ namespace ScientificCalculator
             // pibtn
             // 
             this.pibtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pibtn.Enabled = false;
             this.pibtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.pibtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pibtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -720,6 +766,7 @@ namespace ScientificCalculator
             // tanhbtn
             // 
             this.tanhbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tanhbtn.Enabled = false;
             this.tanhbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tanhbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tanhbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -733,6 +780,7 @@ namespace ScientificCalculator
             // coshbtn
             // 
             this.coshbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.coshbtn.Enabled = false;
             this.coshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.coshbtn.Font = new System.Drawing.Font("Tahoma", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.coshbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -746,6 +794,7 @@ namespace ScientificCalculator
             // sinhbtn
             // 
             this.sinhbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.sinhbtn.Enabled = false;
             this.sinhbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sinhbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sinhbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -759,6 +808,7 @@ namespace ScientificCalculator
             // Radbtn
             // 
             this.Radbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Radbtn.Enabled = false;
             this.Radbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Radbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Radbtn.ForeColor = System.Drawing.Color.Honeydew;
@@ -789,7 +839,6 @@ namespace ScientificCalculator
             this.radiobtnon.Name = "radiobtnon";
             this.radiobtnon.Size = new System.Drawing.Size(65, 35);
             this.radiobtnon.TabIndex = 52;
-            this.radiobtnon.TabStop = true;
             this.radiobtnon.Text = "ON";
             this.radiobtnon.UseVisualStyleBackColor = false;
             this.radiobtnon.CheckedChanged += new System.EventHandler(this.radiobtnon_CheckedChanged);
@@ -803,7 +852,6 @@ namespace ScientificCalculator
             this.radiobtnoff.Name = "radiobtnoff";
             this.radiobtnoff.Size = new System.Drawing.Size(77, 35);
             this.radiobtnoff.TabIndex = 53;
-            this.radiobtnoff.TabStop = true;
             this.radiobtnoff.Text = "OFF";
             this.radiobtnoff.UseVisualStyleBackColor = false;
             this.radiobtnoff.CheckedChanged += new System.EventHandler(this.radiobtnoff_CheckedChanged);
@@ -811,10 +859,10 @@ namespace ScientificCalculator
             // Calcu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(748, 462);
+            this.ClientSize = new System.Drawing.Size(754, 464);
             this.ControlBox = false;
             this.Controls.Add(this.radiobtnoff);
             this.Controls.Add(this.radiobtnon);
@@ -875,7 +923,6 @@ namespace ScientificCalculator
             this.Name = "Calcu";
             this.Opacity = 0.97D;
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
             this.Load += new System.EventHandler(this.Calcu_Load);
