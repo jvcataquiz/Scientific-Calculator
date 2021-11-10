@@ -14,6 +14,7 @@ namespace ScientificCalculator
     {
         string operation;
         double firstvalue;
+        string[] result;
         double secondvalue;
         double answer;
         string[] parts = null;
@@ -218,44 +219,33 @@ namespace ScientificCalculator
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
-           
             operation = "+";
-            if (!txtboxdisplay.Text.Contains("+"))
-            {
-                txtboxdisplay.Text = txtboxdisplay.Text + "+";
-            }
+            txtboxdisplay.Text = txtboxdisplay.Text + "+";
+
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
             
             operation = "-";
-            if (!txtboxdisplay.Text.Contains("-"))
-            {
-                txtboxdisplay.Text = txtboxdisplay.Text + "-";
-            }
+            txtboxdisplay.Text = txtboxdisplay.Text + "-";
+           
 
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
            
             operation = "x";
-            if (!txtboxdisplay.Text.Contains("x"))
-            {
-                txtboxdisplay.Text = txtboxdisplay.Text + "x";
-            }
-
+            txtboxdisplay.Text = txtboxdisplay.Text + "x";
+      
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
             
             operation = "/";
-            if (!txtboxdisplay.Text.Contains("/"))
-            {
-                txtboxdisplay.Text = txtboxdisplay.Text + "/";
-            }
-
+            txtboxdisplay.Text = txtboxdisplay.Text + "/";
+        
         }
 
         private void equalbtn_Click(object sender, EventArgs e)
@@ -265,32 +255,35 @@ namespace ScientificCalculator
             {
                 case "x":
                     parts = txtboxdisplay.Text.Split("x");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue * secondvalue;
+                    for (int i = 0; i < parts.Length; i++)
+                    {
+                        answer = answer * Convert.ToDouble(parts[i]);
+                    }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "/":
                     parts = txtboxdisplay.Text.Split("/");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue / secondvalue;
+                    for (int i = 0; i < parts.Length; i++)
+                    {
+                        answer = answer / Convert.ToDouble(parts[i]);
+                    }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "+":
-                   
                     parts = txtboxdisplay.Text.Split("+");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue + secondvalue;
+                    for (int i = 0; i < parts.Length; i++)
+                    {
+                        answer = answer + Convert.ToDouble(parts[i]);
+                    }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "-":
                     parts = txtboxdisplay.Text.Split("-");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    secondvalue = Convert.ToDouble(parts[1]);
-                    answer = firstvalue - secondvalue;
-                    txtboxdisplay.Text =  Convert.ToString(answer);
+                    for (int i = 0; i < parts.Length; i++)
+                    {
+                        answer = answer - Convert.ToDouble(parts[i]);
+                    }
+                    txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "^":
                     parts = txtboxdisplay.Text.Split("^");
