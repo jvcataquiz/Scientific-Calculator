@@ -474,6 +474,7 @@ namespace ScientificCalculator
             this.logbtn.TabIndex = 26;
             this.logbtn.Text = "log10";
             this.logbtn.UseVisualStyleBackColor = false;
+            this.logbtn.Click += new System.EventHandler(this.logbtn_Click);
             // 
             // lnbtn
             // 
@@ -488,6 +489,7 @@ namespace ScientificCalculator
             this.lnbtn.TabIndex = 25;
             this.lnbtn.Text = "ln";
             this.lnbtn.UseVisualStyleBackColor = false;
+            this.lnbtn.Click += new System.EventHandler(this.lnbtn_Click);
             // 
             // xsquarerootofany
             // 
@@ -502,6 +504,7 @@ namespace ScientificCalculator
             this.xsquarerootofany.TabIndex = 24;
             this.xsquarerootofany.Text = " x√y";
             this.xsquarerootofany.UseVisualStyleBackColor = false;
+            this.xsquarerootofany.Click += new System.EventHandler(this.xsquarerootofany_Click);
             // 
             // cuberootbtn
             // 
@@ -516,7 +519,7 @@ namespace ScientificCalculator
             this.cuberootbtn.TabIndex = 23;
             this.cuberootbtn.Text = "3√x";
             this.cuberootbtn.UseVisualStyleBackColor = false;
-            this.cuberootbtn.Click += new System.EventHandler(this.button28_Click);
+            this.cuberootbtn.Click += new System.EventHandler(this.cuberootbtn_Click);
             // 
             // sqrtbtn
             // 
@@ -531,6 +534,7 @@ namespace ScientificCalculator
             this.sqrtbtn.TabIndex = 22;
             this.sqrtbtn.Text = " 2√x";
             this.sqrtbtn.UseVisualStyleBackColor = false;
+            this.sqrtbtn.Click += new System.EventHandler(this.sqrtbtn_Click);
             // 
             // oneoverxbtn
             // 
@@ -545,6 +549,7 @@ namespace ScientificCalculator
             this.oneoverxbtn.TabIndex = 21;
             this.oneoverxbtn.Text = "1/x";
             this.oneoverxbtn.UseVisualStyleBackColor = false;
+            this.oneoverxbtn.Click += new System.EventHandler(this.oneoverxbtn_Click);
             // 
             // additionbtn
             // 
@@ -634,6 +639,7 @@ namespace ScientificCalculator
             this.ebtn.TabIndex = 35;
             this.ebtn.Text = "e";
             this.ebtn.UseVisualStyleBackColor = false;
+            this.ebtn.Click += new System.EventHandler(this.ebtn_Click);
             // 
             // tanbtn
             // 
@@ -829,9 +835,9 @@ namespace ScientificCalculator
             this.label1.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 33);
+            this.label1.Size = new System.Drawing.Size(158, 33);
             this.label1.TabIndex = 51;
-            this.label1.Text = "KALYO ®";
+            this.label1.Text = "KALKYO ®";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // radiobtnon
@@ -866,7 +872,7 @@ namespace ScientificCalculator
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(754, 464);
+            this.ClientSize = new System.Drawing.Size(751, 463);
             this.ControlBox = false;
             this.Controls.Add(this.radiobtnoff);
             this.Controls.Add(this.radiobtnon);

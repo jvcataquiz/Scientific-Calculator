@@ -14,10 +14,9 @@ namespace ScientificCalculator
     {
         string operation;
         double firstvalue;
-        string[] result;
         double secondvalue;
         double answer;
-        string[] parts = null;
+        string[] parts;
         public Calcu()
         {
             InitializeComponent();
@@ -117,16 +116,9 @@ namespace ScientificCalculator
 
         }
 
-
-        private void button28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void clearbtn_Click(object sender, EventArgs e)
         {
-            txtboxdisplay.Clear();
+          
             txtboxdisplay.Text = "0";
         }
 
@@ -145,13 +137,11 @@ namespace ScientificCalculator
 
         }
 
-
         private void btnzero_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "0";
         }
-
         private void btn1_Click(object sender, EventArgs e)
         {
             clearzer0();
@@ -175,13 +165,11 @@ namespace ScientificCalculator
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "4";
         }
-
         private void btn5_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "5";
         }
-
         private void btn6_Click(object sender, EventArgs e)
         {
             clearzer0();
@@ -209,40 +197,31 @@ namespace ScientificCalculator
         private void decibtn_Click(object sender, EventArgs e)
         {
             clearzer0();
-
             if (!txtboxdisplay.Text.Contains("."))
             {
                 txtboxdisplay.Text = txtboxdisplay.Text + ".";
             }
-
         }
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
             operation = "+";
             txtboxdisplay.Text = txtboxdisplay.Text + "+";
-
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
-            
             operation = "-";
             txtboxdisplay.Text = txtboxdisplay.Text + "-";
-           
-
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
-           
             operation = "x";
             txtboxdisplay.Text = txtboxdisplay.Text + "x";
-      
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
-            
             operation = "/";
             txtboxdisplay.Text = txtboxdisplay.Text + "/";
         
@@ -250,22 +229,31 @@ namespace ScientificCalculator
 
         private void equalbtn_Click(object sender, EventArgs e)
         {
-
+           
             switch (operation)
             {
                 case "x":
+                    answer = 1;
                     parts = txtboxdisplay.Text.Split("x");
+                   
                     for (int i = 0; i < parts.Length; i++)
                     {
-                        answer = answer * Convert.ToDouble(parts[i]);
+                        answer *= (Convert.ToDouble(parts[i]));
                     }
+                   
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "/":
+                    answer = 0;
                     parts = txtboxdisplay.Text.Split("/");
                     for (int i = 0; i < parts.Length; i++)
                     {
-                        answer = answer / Convert.ToDouble(parts[i]);
+                            answer /= (Convert.ToDouble(parts[i]));
+                        if (answer==0)
+                        {
+                            answer = (Convert.ToDouble(parts[i]));
+                        }
+                     
                     }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
@@ -278,10 +266,20 @@ namespace ScientificCalculator
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "-":
+                    answer = 0;
                     parts = txtboxdisplay.Text.Split("-");
                     for (int i = 0; i < parts.Length; i++)
                     {
-                        answer = answer - Convert.ToDouble(parts[i]);
+                        if (answer == 0)
+                        {
+                            answer = (Convert.ToDouble(parts[0])) - Convert.ToDouble(parts[i]);
+                        }
+                        else
+                        {
+                            answer -= Convert.ToDouble(parts[i]);
+                        }
+                        
+
                     }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
@@ -316,6 +314,44 @@ namespace ScientificCalculator
                     answer = Math.Pow(2.71828, secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
+                case "1/":
+                    parts = txtboxdisplay.Text.Split("1/");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = 1 / secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "2√":
+                    parts = txtboxdisplay.Text.Split("2√");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Sqrt(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "3√":
+                    parts = txtboxdisplay.Text.Split("3√");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Cbrt(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "√'":
+                    parts = txtboxdisplay.Text.Split("√'");
+                    firstvalue = Convert.ToDouble(parts[1]);
+                    secondvalue = Convert.ToDouble(parts[0]);
+                    answer = Math.Pow(firstvalue,(1/secondvalue));
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "ln":
+                    parts = txtboxdisplay.Text.Split("ln");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Log(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "log10":
+                    parts = txtboxdisplay.Text.Split("log10-");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Log10(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+              
             }
         }
         private void tenraisedbtn_Click(object sender, EventArgs e)
@@ -324,7 +360,6 @@ namespace ScientificCalculator
             if (!txtboxdisplay.Text.Contains("^"))
             {
                 clearzer0();
-
                 txtboxdisplay.Text =   "10 ^" + txtboxdisplay.Text;
             }
            
@@ -332,8 +367,8 @@ namespace ScientificCalculator
 
         private void pibtn_Click(object sender, EventArgs e)
         {
-            answer = Math.PI;
-            txtboxdisplay.Text = answer.ToString();
+              clearzer0();
+              txtboxdisplay.Text = txtboxdisplay.Text + "3.1416";
         }
 
 
@@ -349,7 +384,6 @@ namespace ScientificCalculator
             if (!txtboxdisplay.Text.Contains("^2"))
             {
                 clearzer0();
-
                 txtboxdisplay.Text = txtboxdisplay.Text + "^2";
             }
         }
@@ -360,7 +394,6 @@ namespace ScientificCalculator
             if (!txtboxdisplay.Text.Contains("^3"))
             {
                 clearzer0();
-
                 txtboxdisplay.Text = txtboxdisplay.Text + "^3";
             }
         }
@@ -371,7 +404,6 @@ namespace ScientificCalculator
             if (!txtboxdisplay.Text.Contains("^*"))
             {
                 clearzer0();
-
                 txtboxdisplay.Text = txtboxdisplay.Text + "^*";
             }
         }
@@ -382,9 +414,74 @@ namespace ScientificCalculator
             if (!txtboxdisplay.Text.Contains("e*"))
             {
                 clearzer0();
-
                 txtboxdisplay.Text = "e^" + txtboxdisplay.Text;
             }
+        }
+
+        private void oneoverxbtn_Click(object sender, EventArgs e)
+        {
+            operation = "1/";
+            if (!txtboxdisplay.Text.Contains("1/"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "1/" + txtboxdisplay.Text;
+            }
+        }
+
+        private void sqrtbtn_Click(object sender, EventArgs e)
+        {
+            operation = "2√";
+            if (!txtboxdisplay.Text.Contains("2√"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "2√" + txtboxdisplay.Text;
+            }
+        }
+
+        private void cuberootbtn_Click(object sender, EventArgs e)
+        {
+           
+            operation = "3√";
+            if (!txtboxdisplay.Text.Contains("3√"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "3√" + txtboxdisplay.Text;
+            }
+        }
+
+        private void xsquarerootofany_Click(object sender, EventArgs e)
+        {
+            operation = "√'";
+            if (!txtboxdisplay.Text.Contains("√'"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = txtboxdisplay.Text + "√'" ;
+            }
+        }
+
+        private void lnbtn_Click(object sender, EventArgs e)
+        {
+            operation = "ln";
+            if (!txtboxdisplay.Text.Contains("ln"))
+            {
+                clearzer0();
+                txtboxdisplay.Text ="ln" + txtboxdisplay.Text;
+            }
+        }
+
+        private void logbtn_Click(object sender, EventArgs e)
+        {
+            operation = "log10";
+            if (!txtboxdisplay.Text.Contains("log10"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "log10-" + txtboxdisplay.Text;
+            }
+        }
+
+        private void ebtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
