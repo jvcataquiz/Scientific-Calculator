@@ -82,6 +82,15 @@ namespace ScientificCalculator
             this.label1 = new System.Windows.Forms.Label();
             this.radiobtnon = new System.Windows.Forms.RadioButton();
             this.radiobtnoff = new System.Windows.Forms.RadioButton();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.measurementGroupBox = new System.Windows.Forms.GroupBox();
+            this.rbtweight = new System.Windows.Forms.RadioButton();
+            this.rbtvol = new System.Windows.Forms.RadioButton();
+            this.rbtlength = new System.Windows.Forms.RadioButton();
+            this.rbttemp = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox.SuspendLayout();
+            this.measurementGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtboxdisplay
@@ -98,7 +107,6 @@ namespace ScientificCalculator
             this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
             this.txtboxdisplay.TabIndex = 0;
             this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtboxdisplay.TextChanged += new System.EventHandler(this.txtboxdisplay_TextChanged);
             // 
             // parenthesisopen
             // 
@@ -107,13 +115,14 @@ namespace ScientificCalculator
             this.parenthesisopen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.parenthesisopen.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parenthesisopen.ForeColor = System.Drawing.Color.Honeydew;
-            this.parenthesisopen.Location = new System.Drawing.Point(12, 141);
+            this.parenthesisopen.Location = new System.Drawing.Point(1, 95);
             this.parenthesisopen.Name = "parenthesisopen";
             this.parenthesisopen.Size = new System.Drawing.Size(68, 59);
             this.parenthesisopen.TabIndex = 1;
             this.parenthesisopen.Text = "(";
             this.parenthesisopen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.parenthesisopen.UseVisualStyleBackColor = false;
+            this.parenthesisopen.Click += new System.EventHandler(this.parenthesisopen_Click);
             // 
             // parenthesisclose
             // 
@@ -122,13 +131,14 @@ namespace ScientificCalculator
             this.parenthesisclose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.parenthesisclose.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.parenthesisclose.ForeColor = System.Drawing.Color.Honeydew;
-            this.parenthesisclose.Location = new System.Drawing.Point(86, 141);
+            this.parenthesisclose.Location = new System.Drawing.Point(75, 95);
             this.parenthesisclose.Name = "parenthesisclose";
             this.parenthesisclose.Size = new System.Drawing.Size(68, 59);
             this.parenthesisclose.TabIndex = 2;
             this.parenthesisclose.Text = ")";
             this.parenthesisclose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.parenthesisclose.UseVisualStyleBackColor = false;
+            this.parenthesisclose.Click += new System.EventHandler(this.parenthesisclose_Click);
             // 
             // mcbtn
             // 
@@ -138,12 +148,13 @@ namespace ScientificCalculator
             this.mcbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mcbtn.ForeColor = System.Drawing.Color.Honeydew;
             this.mcbtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mcbtn.Location = new System.Drawing.Point(160, 141);
+            this.mcbtn.Location = new System.Drawing.Point(149, 95);
             this.mcbtn.Name = "mcbtn";
             this.mcbtn.Size = new System.Drawing.Size(68, 59);
             this.mcbtn.TabIndex = 3;
             this.mcbtn.Text = "mc";
             this.mcbtn.UseVisualStyleBackColor = false;
+            this.mcbtn.Click += new System.EventHandler(this.mcbtn_Click);
             // 
             // mrbtn
             // 
@@ -152,12 +163,13 @@ namespace ScientificCalculator
             this.mrbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mrbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mrbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.mrbtn.Location = new System.Drawing.Point(382, 141);
+            this.mrbtn.Location = new System.Drawing.Point(371, 95);
             this.mrbtn.Name = "mrbtn";
             this.mrbtn.Size = new System.Drawing.Size(68, 59);
             this.mrbtn.TabIndex = 6;
             this.mrbtn.Text = "mr";
             this.mrbtn.UseVisualStyleBackColor = false;
+            this.mrbtn.Click += new System.EventHandler(this.mrbtn_Click);
             // 
             // mminusbtn
             // 
@@ -167,12 +179,13 @@ namespace ScientificCalculator
             this.mminusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mminusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mminusbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.mminusbtn.Location = new System.Drawing.Point(308, 141);
+            this.mminusbtn.Location = new System.Drawing.Point(297, 95);
             this.mminusbtn.Name = "mminusbtn";
             this.mminusbtn.Size = new System.Drawing.Size(68, 59);
             this.mminusbtn.TabIndex = 5;
             this.mminusbtn.Text = "m-";
             this.mminusbtn.UseVisualStyleBackColor = false;
+            this.mminusbtn.Click += new System.EventHandler(this.mminusbtn_Click);
             // 
             // mplusbtn
             // 
@@ -182,12 +195,13 @@ namespace ScientificCalculator
             this.mplusbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mplusbtn.ForeColor = System.Drawing.Color.Honeydew;
             this.mplusbtn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.mplusbtn.Location = new System.Drawing.Point(234, 141);
+            this.mplusbtn.Location = new System.Drawing.Point(223, 95);
             this.mplusbtn.Name = "mplusbtn";
             this.mplusbtn.Size = new System.Drawing.Size(68, 59);
             this.mplusbtn.TabIndex = 4;
             this.mplusbtn.Text = "m+";
             this.mplusbtn.UseVisualStyleBackColor = false;
+            this.mplusbtn.Click += new System.EventHandler(this.mplusbtn_Click);
             // 
             // percentagebtn
             // 
@@ -196,12 +210,13 @@ namespace ScientificCalculator
             this.percentagebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.percentagebtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.percentagebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.percentagebtn.Location = new System.Drawing.Point(604, 141);
+            this.percentagebtn.Location = new System.Drawing.Point(593, 95);
             this.percentagebtn.Name = "percentagebtn";
             this.percentagebtn.Size = new System.Drawing.Size(68, 59);
             this.percentagebtn.TabIndex = 9;
             this.percentagebtn.Text = "%";
             this.percentagebtn.UseVisualStyleBackColor = false;
+            this.percentagebtn.Click += new System.EventHandler(this.percentagebtn_Click);
             // 
             // cebtn
             // 
@@ -210,7 +225,7 @@ namespace ScientificCalculator
             this.cebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.cebtn.Location = new System.Drawing.Point(530, 141);
+            this.cebtn.Location = new System.Drawing.Point(519, 95);
             this.cebtn.Name = "cebtn";
             this.cebtn.Size = new System.Drawing.Size(68, 59);
             this.cebtn.TabIndex = 8;
@@ -225,7 +240,7 @@ namespace ScientificCalculator
             this.clearbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clearbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.clearbtn.Location = new System.Drawing.Point(456, 141);
+            this.clearbtn.Location = new System.Drawing.Point(445, 95);
             this.clearbtn.Name = "clearbtn";
             this.clearbtn.Size = new System.Drawing.Size(68, 59);
             this.clearbtn.TabIndex = 7;
@@ -241,12 +256,11 @@ namespace ScientificCalculator
             this.divisionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.divisionbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.divisionbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.divisionbtn.Location = new System.Drawing.Point(678, 141);
+            this.divisionbtn.Location = new System.Drawing.Point(666, 95);
             this.divisionbtn.Name = "divisionbtn";
             this.divisionbtn.Size = new System.Drawing.Size(68, 59);
             this.divisionbtn.TabIndex = 10;
             this.divisionbtn.Text = "÷";
-            this.divisionbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.divisionbtn.UseVisualStyleBackColor = false;
             this.divisionbtn.Click += new System.EventHandler(this.divisionbtn_Click);
             // 
@@ -257,7 +271,7 @@ namespace ScientificCalculator
             this.multiplicationbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.multiplicationbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.multiplicationbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.multiplicationbtn.Location = new System.Drawing.Point(678, 206);
+            this.multiplicationbtn.Location = new System.Drawing.Point(666, 161);
             this.multiplicationbtn.Name = "multiplicationbtn";
             this.multiplicationbtn.Size = new System.Drawing.Size(68, 59);
             this.multiplicationbtn.TabIndex = 20;
@@ -273,7 +287,7 @@ namespace ScientificCalculator
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn9.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn9.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn9.Location = new System.Drawing.Point(604, 206);
+            this.btn9.Location = new System.Drawing.Point(593, 160);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(68, 59);
             this.btn9.TabIndex = 19;
@@ -288,7 +302,7 @@ namespace ScientificCalculator
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn8.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn8.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn8.Location = new System.Drawing.Point(530, 206);
+            this.btn8.Location = new System.Drawing.Point(519, 160);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(68, 59);
             this.btn8.TabIndex = 18;
@@ -303,7 +317,7 @@ namespace ScientificCalculator
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn7.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn7.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn7.Location = new System.Drawing.Point(456, 206);
+            this.btn7.Location = new System.Drawing.Point(445, 160);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(68, 59);
             this.btn7.TabIndex = 17;
@@ -318,7 +332,7 @@ namespace ScientificCalculator
             this.tenraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tenraisedbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tenraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.tenraisedbtn.Location = new System.Drawing.Point(382, 206);
+            this.tenraisedbtn.Location = new System.Drawing.Point(371, 160);
             this.tenraisedbtn.Name = "tenraisedbtn";
             this.tenraisedbtn.Size = new System.Drawing.Size(68, 59);
             this.tenraisedbtn.TabIndex = 16;
@@ -333,7 +347,7 @@ namespace ScientificCalculator
             this.eraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.eraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.eraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.eraisedbtn.Location = new System.Drawing.Point(308, 206);
+            this.eraisedbtn.Location = new System.Drawing.Point(297, 160);
             this.eraisedbtn.Name = "eraisedbtn";
             this.eraisedbtn.Size = new System.Drawing.Size(68, 59);
             this.eraisedbtn.TabIndex = 15;
@@ -348,7 +362,7 @@ namespace ScientificCalculator
             this.xraisedbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.xraisedbtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.xraisedbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.xraisedbtn.Location = new System.Drawing.Point(234, 206);
+            this.xraisedbtn.Location = new System.Drawing.Point(223, 160);
             this.xraisedbtn.Name = "xraisedbtn";
             this.xraisedbtn.Size = new System.Drawing.Size(68, 59);
             this.xraisedbtn.TabIndex = 14;
@@ -363,7 +377,7 @@ namespace ScientificCalculator
             this.cubebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cubebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cubebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.cubebtn.Location = new System.Drawing.Point(160, 206);
+            this.cubebtn.Location = new System.Drawing.Point(149, 160);
             this.cubebtn.Name = "cubebtn";
             this.cubebtn.Size = new System.Drawing.Size(68, 59);
             this.cubebtn.TabIndex = 13;
@@ -378,7 +392,7 @@ namespace ScientificCalculator
             this.squarebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.squarebtn.Font = new System.Drawing.Font("Tahoma", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.squarebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.squarebtn.Location = new System.Drawing.Point(86, 206);
+            this.squarebtn.Location = new System.Drawing.Point(75, 160);
             this.squarebtn.Name = "squarebtn";
             this.squarebtn.Size = new System.Drawing.Size(68, 59);
             this.squarebtn.TabIndex = 12;
@@ -393,7 +407,7 @@ namespace ScientificCalculator
             this.secondbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.secondbtn.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.secondbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.secondbtn.Location = new System.Drawing.Point(12, 206);
+            this.secondbtn.Location = new System.Drawing.Point(1, 160);
             this.secondbtn.Name = "secondbtn";
             this.secondbtn.Size = new System.Drawing.Size(68, 59);
             this.secondbtn.TabIndex = 11;
@@ -407,7 +421,7 @@ namespace ScientificCalculator
             this.minusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.minusbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.minusbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.minusbtn.Location = new System.Drawing.Point(678, 271);
+            this.minusbtn.Location = new System.Drawing.Point(665, 226);
             this.minusbtn.Name = "minusbtn";
             this.minusbtn.Size = new System.Drawing.Size(68, 59);
             this.minusbtn.TabIndex = 30;
@@ -423,7 +437,7 @@ namespace ScientificCalculator
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn6.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn6.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn6.Location = new System.Drawing.Point(604, 271);
+            this.btn6.Location = new System.Drawing.Point(593, 225);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(68, 59);
             this.btn6.TabIndex = 29;
@@ -438,7 +452,7 @@ namespace ScientificCalculator
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn5.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn5.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn5.Location = new System.Drawing.Point(530, 271);
+            this.btn5.Location = new System.Drawing.Point(519, 225);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(68, 59);
             this.btn5.TabIndex = 28;
@@ -453,7 +467,7 @@ namespace ScientificCalculator
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn4.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn4.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn4.Location = new System.Drawing.Point(456, 271);
+            this.btn4.Location = new System.Drawing.Point(445, 225);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(68, 59);
             this.btn4.TabIndex = 27;
@@ -468,7 +482,7 @@ namespace ScientificCalculator
             this.logbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.logbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.logbtn.Location = new System.Drawing.Point(382, 271);
+            this.logbtn.Location = new System.Drawing.Point(371, 225);
             this.logbtn.Name = "logbtn";
             this.logbtn.Size = new System.Drawing.Size(68, 59);
             this.logbtn.TabIndex = 26;
@@ -483,7 +497,7 @@ namespace ScientificCalculator
             this.lnbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lnbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lnbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.lnbtn.Location = new System.Drawing.Point(308, 271);
+            this.lnbtn.Location = new System.Drawing.Point(297, 225);
             this.lnbtn.Name = "lnbtn";
             this.lnbtn.Size = new System.Drawing.Size(68, 59);
             this.lnbtn.TabIndex = 25;
@@ -498,7 +512,7 @@ namespace ScientificCalculator
             this.xsquarerootofany.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.xsquarerootofany.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.xsquarerootofany.ForeColor = System.Drawing.Color.Honeydew;
-            this.xsquarerootofany.Location = new System.Drawing.Point(234, 271);
+            this.xsquarerootofany.Location = new System.Drawing.Point(223, 225);
             this.xsquarerootofany.Name = "xsquarerootofany";
             this.xsquarerootofany.Size = new System.Drawing.Size(68, 59);
             this.xsquarerootofany.TabIndex = 24;
@@ -513,7 +527,7 @@ namespace ScientificCalculator
             this.cuberootbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cuberootbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cuberootbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.cuberootbtn.Location = new System.Drawing.Point(160, 271);
+            this.cuberootbtn.Location = new System.Drawing.Point(149, 225);
             this.cuberootbtn.Name = "cuberootbtn";
             this.cuberootbtn.Size = new System.Drawing.Size(68, 59);
             this.cuberootbtn.TabIndex = 23;
@@ -528,7 +542,7 @@ namespace ScientificCalculator
             this.sqrtbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sqrtbtn.Font = new System.Drawing.Font("Tahoma", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sqrtbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.sqrtbtn.Location = new System.Drawing.Point(86, 271);
+            this.sqrtbtn.Location = new System.Drawing.Point(75, 225);
             this.sqrtbtn.Name = "sqrtbtn";
             this.sqrtbtn.Size = new System.Drawing.Size(68, 59);
             this.sqrtbtn.TabIndex = 22;
@@ -543,7 +557,7 @@ namespace ScientificCalculator
             this.oneoverxbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.oneoverxbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oneoverxbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.oneoverxbtn.Location = new System.Drawing.Point(12, 271);
+            this.oneoverxbtn.Location = new System.Drawing.Point(1, 225);
             this.oneoverxbtn.Name = "oneoverxbtn";
             this.oneoverxbtn.Size = new System.Drawing.Size(68, 59);
             this.oneoverxbtn.TabIndex = 21;
@@ -558,7 +572,7 @@ namespace ScientificCalculator
             this.additionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.additionbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.additionbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.additionbtn.Location = new System.Drawing.Point(678, 336);
+            this.additionbtn.Location = new System.Drawing.Point(665, 289);
             this.additionbtn.Name = "additionbtn";
             this.additionbtn.Size = new System.Drawing.Size(68, 59);
             this.additionbtn.TabIndex = 40;
@@ -574,7 +588,7 @@ namespace ScientificCalculator
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn3.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn3.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn3.Location = new System.Drawing.Point(604, 336);
+            this.btn3.Location = new System.Drawing.Point(593, 290);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(68, 59);
             this.btn3.TabIndex = 39;
@@ -589,7 +603,7 @@ namespace ScientificCalculator
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn2.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn2.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn2.Location = new System.Drawing.Point(530, 336);
+            this.btn2.Location = new System.Drawing.Point(519, 290);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(68, 59);
             this.btn2.TabIndex = 38;
@@ -604,7 +618,7 @@ namespace ScientificCalculator
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn1.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn1.ForeColor = System.Drawing.Color.Honeydew;
-            this.btn1.Location = new System.Drawing.Point(456, 336);
+            this.btn1.Location = new System.Drawing.Point(445, 290);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(68, 59);
             this.btn1.TabIndex = 37;
@@ -619,12 +633,13 @@ namespace ScientificCalculator
             this.EEbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EEbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EEbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.EEbtn.Location = new System.Drawing.Point(382, 336);
+            this.EEbtn.Location = new System.Drawing.Point(371, 290);
             this.EEbtn.Name = "EEbtn";
             this.EEbtn.Size = new System.Drawing.Size(68, 59);
             this.EEbtn.TabIndex = 36;
             this.EEbtn.Text = "EE";
             this.EEbtn.UseVisualStyleBackColor = false;
+            this.EEbtn.Click += new System.EventHandler(this.EEbtn_Click);
             // 
             // ebtn
             // 
@@ -633,7 +648,7 @@ namespace ScientificCalculator
             this.ebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.ebtn.Location = new System.Drawing.Point(308, 336);
+            this.ebtn.Location = new System.Drawing.Point(297, 290);
             this.ebtn.Name = "ebtn";
             this.ebtn.Size = new System.Drawing.Size(68, 59);
             this.ebtn.TabIndex = 35;
@@ -648,12 +663,13 @@ namespace ScientificCalculator
             this.tanbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tanbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tanbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.tanbtn.Location = new System.Drawing.Point(234, 336);
+            this.tanbtn.Location = new System.Drawing.Point(223, 290);
             this.tanbtn.Name = "tanbtn";
             this.tanbtn.Size = new System.Drawing.Size(68, 59);
             this.tanbtn.TabIndex = 34;
             this.tanbtn.Text = "tan";
             this.tanbtn.UseVisualStyleBackColor = false;
+            this.tanbtn.Click += new System.EventHandler(this.tanbtn_Click);
             // 
             // cosinebtn
             // 
@@ -662,12 +678,13 @@ namespace ScientificCalculator
             this.cosinebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cosinebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cosinebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.cosinebtn.Location = new System.Drawing.Point(160, 336);
+            this.cosinebtn.Location = new System.Drawing.Point(149, 290);
             this.cosinebtn.Name = "cosinebtn";
             this.cosinebtn.Size = new System.Drawing.Size(68, 59);
             this.cosinebtn.TabIndex = 33;
             this.cosinebtn.Text = "cos";
             this.cosinebtn.UseVisualStyleBackColor = false;
+            this.cosinebtn.Click += new System.EventHandler(this.cosinebtn_Click);
             // 
             // sinebtn
             // 
@@ -676,12 +693,13 @@ namespace ScientificCalculator
             this.sinebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sinebtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sinebtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.sinebtn.Location = new System.Drawing.Point(86, 336);
+            this.sinebtn.Location = new System.Drawing.Point(75, 290);
             this.sinebtn.Name = "sinebtn";
             this.sinebtn.Size = new System.Drawing.Size(68, 59);
             this.sinebtn.TabIndex = 32;
             this.sinebtn.Text = "sin";
             this.sinebtn.UseVisualStyleBackColor = false;
+            this.sinebtn.Click += new System.EventHandler(this.sinebtn_Click);
             // 
             // factorialbtn
             // 
@@ -690,12 +708,13 @@ namespace ScientificCalculator
             this.factorialbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.factorialbtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.factorialbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.factorialbtn.Location = new System.Drawing.Point(12, 336);
+            this.factorialbtn.Location = new System.Drawing.Point(1, 290);
             this.factorialbtn.Name = "factorialbtn";
             this.factorialbtn.Size = new System.Drawing.Size(68, 59);
             this.factorialbtn.TabIndex = 31;
             this.factorialbtn.Text = "x!";
             this.factorialbtn.UseVisualStyleBackColor = false;
+            this.factorialbtn.Click += new System.EventHandler(this.factorialbtn_Click);
             // 
             // equalbtn
             // 
@@ -704,7 +723,7 @@ namespace ScientificCalculator
             this.equalbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.equalbtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.equalbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.equalbtn.Location = new System.Drawing.Point(678, 401);
+            this.equalbtn.Location = new System.Drawing.Point(666, 354);
             this.equalbtn.Name = "equalbtn";
             this.equalbtn.Size = new System.Drawing.Size(68, 59);
             this.equalbtn.TabIndex = 50;
@@ -720,7 +739,7 @@ namespace ScientificCalculator
             this.decibtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.decibtn.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.decibtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.decibtn.Location = new System.Drawing.Point(604, 401);
+            this.decibtn.Location = new System.Drawing.Point(593, 354);
             this.decibtn.Name = "decibtn";
             this.decibtn.Size = new System.Drawing.Size(68, 59);
             this.decibtn.TabIndex = 49;
@@ -736,7 +755,7 @@ namespace ScientificCalculator
             this.btnzero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnzero.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnzero.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnzero.Location = new System.Drawing.Point(456, 401);
+            this.btnzero.Location = new System.Drawing.Point(445, 355);
             this.btnzero.Name = "btnzero";
             this.btnzero.Size = new System.Drawing.Size(142, 59);
             this.btnzero.TabIndex = 47;
@@ -751,7 +770,7 @@ namespace ScientificCalculator
             this.randbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.randbtn.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.randbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.randbtn.Location = new System.Drawing.Point(382, 401);
+            this.randbtn.Location = new System.Drawing.Point(371, 354);
             this.randbtn.Name = "randbtn";
             this.randbtn.Size = new System.Drawing.Size(68, 59);
             this.randbtn.TabIndex = 46;
@@ -765,7 +784,7 @@ namespace ScientificCalculator
             this.pibtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.pibtn.Font = new System.Drawing.Font("Tahoma", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pibtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.pibtn.Location = new System.Drawing.Point(308, 401);
+            this.pibtn.Location = new System.Drawing.Point(297, 354);
             this.pibtn.Name = "pibtn";
             this.pibtn.Size = new System.Drawing.Size(68, 59);
             this.pibtn.TabIndex = 45;
@@ -780,12 +799,13 @@ namespace ScientificCalculator
             this.tanhbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.tanhbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tanhbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.tanhbtn.Location = new System.Drawing.Point(234, 401);
+            this.tanhbtn.Location = new System.Drawing.Point(223, 354);
             this.tanhbtn.Name = "tanhbtn";
             this.tanhbtn.Size = new System.Drawing.Size(68, 59);
             this.tanhbtn.TabIndex = 44;
             this.tanhbtn.Text = "tanh";
             this.tanhbtn.UseVisualStyleBackColor = false;
+            this.tanhbtn.Click += new System.EventHandler(this.tanhbtn_Click);
             // 
             // coshbtn
             // 
@@ -794,12 +814,13 @@ namespace ScientificCalculator
             this.coshbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.coshbtn.Font = new System.Drawing.Font("Tahoma", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.coshbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.coshbtn.Location = new System.Drawing.Point(160, 401);
+            this.coshbtn.Location = new System.Drawing.Point(149, 354);
             this.coshbtn.Name = "coshbtn";
             this.coshbtn.Size = new System.Drawing.Size(68, 59);
             this.coshbtn.TabIndex = 43;
             this.coshbtn.Text = "cosh";
             this.coshbtn.UseVisualStyleBackColor = false;
+            this.coshbtn.Click += new System.EventHandler(this.coshbtn_Click);
             // 
             // sinhbtn
             // 
@@ -808,12 +829,13 @@ namespace ScientificCalculator
             this.sinhbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sinhbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sinhbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.sinhbtn.Location = new System.Drawing.Point(86, 401);
+            this.sinhbtn.Location = new System.Drawing.Point(75, 354);
             this.sinhbtn.Name = "sinhbtn";
             this.sinhbtn.Size = new System.Drawing.Size(68, 59);
             this.sinhbtn.TabIndex = 42;
             this.sinhbtn.Text = "sinh";
             this.sinhbtn.UseVisualStyleBackColor = false;
+            this.sinhbtn.Click += new System.EventHandler(this.sinhbtn_Click);
             // 
             // Radbtn
             // 
@@ -822,12 +844,13 @@ namespace ScientificCalculator
             this.Radbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Radbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Radbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.Radbtn.Location = new System.Drawing.Point(12, 401);
+            this.Radbtn.Location = new System.Drawing.Point(1, 354);
             this.Radbtn.Name = "Radbtn";
             this.Radbtn.Size = new System.Drawing.Size(68, 59);
             this.Radbtn.TabIndex = 41;
             this.Radbtn.Text = "Rad";
             this.Radbtn.UseVisualStyleBackColor = false;
+            this.Radbtn.Click += new System.EventHandler(this.Radbtn_Click);
             // 
             // label1
             // 
@@ -838,16 +861,16 @@ namespace ScientificCalculator
             this.label1.Size = new System.Drawing.Size(158, 33);
             this.label1.TabIndex = 51;
             this.label1.Text = "KALKYO ®";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // radiobtnon
             // 
             this.radiobtnon.AutoSize = true;
             this.radiobtnon.BackColor = System.Drawing.Color.Red;
             this.radiobtnon.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radiobtnon.Location = new System.Drawing.Point(587, 10);
+            this.radiobtnon.Location = new System.Drawing.Point(574, 10);
             this.radiobtnon.Name = "radiobtnon";
-            this.radiobtnon.Size = new System.Drawing.Size(65, 35);
+            this.radiobtnon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radiobtnon.Size = new System.Drawing.Size(75, 35);
             this.radiobtnon.TabIndex = 52;
             this.radiobtnon.Text = "ON";
             this.radiobtnon.UseVisualStyleBackColor = false;
@@ -858,75 +881,165 @@ namespace ScientificCalculator
             this.radiobtnoff.AutoSize = true;
             this.radiobtnoff.BackColor = System.Drawing.Color.Red;
             this.radiobtnoff.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radiobtnoff.Location = new System.Drawing.Point(666, 10);
+            this.radiobtnoff.Location = new System.Drawing.Point(657, 10);
             this.radiobtnoff.Name = "radiobtnoff";
-            this.radiobtnoff.Size = new System.Drawing.Size(77, 35);
+            this.radiobtnoff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.radiobtnoff.Size = new System.Drawing.Size(87, 35);
             this.radiobtnoff.TabIndex = 53;
             this.radiobtnoff.Text = "OFF";
             this.radiobtnoff.UseVisualStyleBackColor = false;
             this.radiobtnoff.CheckedChanged += new System.EventHandler(this.radiobtnoff_CheckedChanged);
             // 
+            // groupBox
+            // 
+            this.groupBox.Controls.Add(this.decibtn);
+            this.groupBox.Controls.Add(this.equalbtn);
+            this.groupBox.Controls.Add(this.btnzero);
+            this.groupBox.Controls.Add(this.randbtn);
+            this.groupBox.Controls.Add(this.divisionbtn);
+            this.groupBox.Controls.Add(this.pibtn);
+            this.groupBox.Controls.Add(this.btn3);
+            this.groupBox.Controls.Add(this.tanhbtn);
+            this.groupBox.Controls.Add(this.btn2);
+            this.groupBox.Controls.Add(this.coshbtn);
+            this.groupBox.Controls.Add(this.btn1);
+            this.groupBox.Controls.Add(this.sinhbtn);
+            this.groupBox.Controls.Add(this.EEbtn);
+            this.groupBox.Controls.Add(this.Radbtn);
+            this.groupBox.Controls.Add(this.ebtn);
+            this.groupBox.Controls.Add(this.tanbtn);
+            this.groupBox.Controls.Add(this.cosinebtn);
+            this.groupBox.Controls.Add(this.sinebtn);
+            this.groupBox.Controls.Add(this.additionbtn);
+            this.groupBox.Controls.Add(this.factorialbtn);
+            this.groupBox.Controls.Add(this.minusbtn);
+            this.groupBox.Controls.Add(this.btn6);
+            this.groupBox.Controls.Add(this.multiplicationbtn);
+            this.groupBox.Controls.Add(this.btn5);
+            this.groupBox.Controls.Add(this.btn4);
+            this.groupBox.Controls.Add(this.logbtn);
+            this.groupBox.Controls.Add(this.lnbtn);
+            this.groupBox.Controls.Add(this.xsquarerootofany);
+            this.groupBox.Controls.Add(this.cuberootbtn);
+            this.groupBox.Controls.Add(this.sqrtbtn);
+            this.groupBox.Controls.Add(this.oneoverxbtn);
+            this.groupBox.Controls.Add(this.btn9);
+            this.groupBox.Controls.Add(this.btn8);
+            this.groupBox.Controls.Add(this.btn7);
+            this.groupBox.Controls.Add(this.tenraisedbtn);
+            this.groupBox.Controls.Add(this.eraisedbtn);
+            this.groupBox.Controls.Add(this.xraisedbtn);
+            this.groupBox.Controls.Add(this.cubebtn);
+            this.groupBox.Controls.Add(this.squarebtn);
+            this.groupBox.Controls.Add(this.secondbtn);
+            this.groupBox.Controls.Add(this.percentagebtn);
+            this.groupBox.Controls.Add(this.cebtn);
+            this.groupBox.Controls.Add(this.clearbtn);
+            this.groupBox.Controls.Add(this.mrbtn);
+            this.groupBox.Controls.Add(this.mminusbtn);
+            this.groupBox.Controls.Add(this.mplusbtn);
+            this.groupBox.Controls.Add(this.mcbtn);
+            this.groupBox.Controls.Add(this.parenthesisclose);
+            this.groupBox.Controls.Add(this.parenthesisopen);
+            this.groupBox.Location = new System.Drawing.Point(12, 51);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(734, 420);
+            this.groupBox.TabIndex = 54;
+            this.groupBox.TabStop = false;
+            // 
+            // measurementGroupBox
+            // 
+            this.measurementGroupBox.BackColor = System.Drawing.Color.AliceBlue;
+            this.measurementGroupBox.Controls.Add(this.rbtweight);
+            this.measurementGroupBox.Controls.Add(this.rbtvol);
+            this.measurementGroupBox.Controls.Add(this.rbtlength);
+            this.measurementGroupBox.Controls.Add(this.rbttemp);
+            this.measurementGroupBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.measurementGroupBox.Location = new System.Drawing.Point(346, 38);
+            this.measurementGroupBox.Name = "measurementGroupBox";
+            this.measurementGroupBox.Size = new System.Drawing.Size(105, 115);
+            this.measurementGroupBox.TabIndex = 55;
+            this.measurementGroupBox.TabStop = false;
+            this.measurementGroupBox.Visible = false;
+            // 
+            // rbtweight
+            // 
+            this.rbtweight.AutoSize = true;
+            this.rbtweight.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbtweight.Location = new System.Drawing.Point(6, 19);
+            this.rbtweight.Name = "rbtweight";
+            this.rbtweight.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.rbtweight.Size = new System.Drawing.Size(68, 20);
+            this.rbtweight.TabIndex = 4;
+            this.rbtweight.Text = "Weight";
+            this.rbtweight.UseVisualStyleBackColor = true;
+            // 
+            // rbtvol
+            // 
+            this.rbtvol.AutoSize = true;
+            this.rbtvol.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbtvol.Location = new System.Drawing.Point(7, 89);
+            this.rbtvol.Name = "rbtvol";
+            this.rbtvol.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.rbtvol.Size = new System.Drawing.Size(69, 20);
+            this.rbtvol.TabIndex = 3;
+            this.rbtvol.Text = "Volume";
+            this.rbtvol.UseVisualStyleBackColor = true;
+            // 
+            // rbtlength
+            // 
+            this.rbtlength.AutoSize = true;
+            this.rbtlength.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbtlength.Location = new System.Drawing.Point(6, 67);
+            this.rbtlength.Name = "rbtlength";
+            this.rbtlength.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.rbtlength.Size = new System.Drawing.Size(68, 20);
+            this.rbtlength.TabIndex = 2;
+            this.rbtlength.Text = "Length";
+            this.rbtlength.UseVisualStyleBackColor = true;
+            // 
+            // rbttemp
+            // 
+            this.rbttemp.AutoSize = true;
+            this.rbttemp.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rbttemp.Location = new System.Drawing.Point(6, 42);
+            this.rbttemp.Name = "rbttemp";
+            this.rbttemp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.rbttemp.Size = new System.Drawing.Size(95, 20);
+            this.rbttemp.TabIndex = 1;
+            this.rbttemp.Text = "Temperature";
+            this.rbttemp.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightBlue;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(344, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Measurement";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Calcu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(751, 463);
+            this.ClientSize = new System.Drawing.Size(749, 467);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.measurementGroupBox);
+            this.Controls.Add(this.txtboxdisplay);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.radiobtnoff);
             this.Controls.Add(this.radiobtnon);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.equalbtn);
-            this.Controls.Add(this.decibtn);
-            this.Controls.Add(this.btnzero);
-            this.Controls.Add(this.randbtn);
-            this.Controls.Add(this.pibtn);
-            this.Controls.Add(this.tanhbtn);
-            this.Controls.Add(this.coshbtn);
-            this.Controls.Add(this.sinhbtn);
-            this.Controls.Add(this.Radbtn);
-            this.Controls.Add(this.additionbtn);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.EEbtn);
-            this.Controls.Add(this.ebtn);
-            this.Controls.Add(this.tanbtn);
-            this.Controls.Add(this.cosinebtn);
-            this.Controls.Add(this.sinebtn);
-            this.Controls.Add(this.factorialbtn);
-            this.Controls.Add(this.minusbtn);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.logbtn);
-            this.Controls.Add(this.lnbtn);
-            this.Controls.Add(this.xsquarerootofany);
-            this.Controls.Add(this.cuberootbtn);
-            this.Controls.Add(this.sqrtbtn);
-            this.Controls.Add(this.oneoverxbtn);
-            this.Controls.Add(this.multiplicationbtn);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.tenraisedbtn);
-            this.Controls.Add(this.eraisedbtn);
-            this.Controls.Add(this.xraisedbtn);
-            this.Controls.Add(this.cubebtn);
-            this.Controls.Add(this.squarebtn);
-            this.Controls.Add(this.secondbtn);
-            this.Controls.Add(this.divisionbtn);
-            this.Controls.Add(this.percentagebtn);
-            this.Controls.Add(this.cebtn);
-            this.Controls.Add(this.clearbtn);
-            this.Controls.Add(this.mrbtn);
-            this.Controls.Add(this.mminusbtn);
-            this.Controls.Add(this.mplusbtn);
-            this.Controls.Add(this.mcbtn);
-            this.Controls.Add(this.parenthesisclose);
-            this.Controls.Add(this.parenthesisopen);
-            this.Controls.Add(this.txtboxdisplay);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -936,6 +1049,9 @@ namespace ScientificCalculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
             this.Load += new System.EventHandler(this.Calcu_Load);
+            this.groupBox.ResumeLayout(false);
+            this.measurementGroupBox.ResumeLayout(false);
+            this.measurementGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -996,6 +1112,13 @@ namespace ScientificCalculator
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radiobtnon;
         private System.Windows.Forms.RadioButton radiobtnoff;
+        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.GroupBox measurementGroupBox;
+        private System.Windows.Forms.RadioButton rbtvol;
+        private System.Windows.Forms.RadioButton rbtlength;
+        private System.Windows.Forms.RadioButton rbttemp;
+        private System.Windows.Forms.RadioButton rbtweight;
+        private System.Windows.Forms.Button button1;
     }
 }
 

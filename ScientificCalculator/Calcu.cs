@@ -17,6 +17,7 @@ namespace ScientificCalculator
         double secondvalue;
         double answer;
         string[] parts;
+        double memoryStore;
         public Calcu()
         {
             InitializeComponent();
@@ -78,6 +79,7 @@ namespace ScientificCalculator
             this.sinhbtn.Enabled = true;
             this.Radbtn.Enabled = true;
             this.label1.Enabled = true;
+            
         }
         private void radiobtnoff_CheckedChanged(object sender, EventArgs e)
         {
@@ -87,33 +89,11 @@ namespace ScientificCalculator
 
         public void clearzer0()
         {
-            if (txtboxdisplay.Text == "0" || txtboxdisplay.Text == "10^")
+            if (txtboxdisplay.Text == "0")
             {
                 txtboxdisplay.Clear();
+                answer = 0;
             }
-        }
-
-        private void txtboxdisplay_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void clearbtn_Click(object sender, EventArgs e)
@@ -283,6 +263,12 @@ namespace ScientificCalculator
                     }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
+                case "%":
+                    parts = txtboxdisplay.Text.Split("%");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    answer = firstvalue / 100;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
                 case "^":
                     parts = txtboxdisplay.Text.Split("^");
                     secondvalue = Convert.ToDouble(parts[1]);
@@ -351,7 +337,43 @@ namespace ScientificCalculator
                     answer = Math.Log10(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
-              
+                case "sin":
+                    parts = txtboxdisplay.Text.Split("sin");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Sin(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "cos":
+                    parts = txtboxdisplay.Text.Split("cos");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Cos(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "tan":
+                    parts = txtboxdisplay.Text.Split("tan");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Tan(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "sinh":
+                    parts = txtboxdisplay.Text.Split("sinh");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Sinh(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "cosh":
+                    parts = txtboxdisplay.Text.Split("cosh");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Cosh(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                case "tanh":
+                    parts = txtboxdisplay.Text.Split("tanh");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = Math.Tanh(secondvalue);
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+          
             }
         }
         private void tenraisedbtn_Click(object sender, EventArgs e)
@@ -372,6 +394,11 @@ namespace ScientificCalculator
         }
 
 
+        private void ebtn_Click(object sender, EventArgs e)
+        {
+            clearzer0();
+            txtboxdisplay.Text = txtboxdisplay.Text + "2.7183";
+        }
 
         private void Calcu_Load(object sender, EventArgs e)
         {
@@ -411,7 +438,7 @@ namespace ScientificCalculator
         private void eraisedbtn_Click(object sender, EventArgs e)
         {
             operation = "e^";
-            if (!txtboxdisplay.Text.Contains("e*"))
+            if (!txtboxdisplay.Text.Contains("e^"))
             {
                 clearzer0();
                 txtboxdisplay.Text = "e^" + txtboxdisplay.Text;
@@ -479,7 +506,135 @@ namespace ScientificCalculator
             }
         }
 
-        private void ebtn_Click(object sender, EventArgs e)
+
+        private void sinebtn_Click(object sender, EventArgs e)
+        {
+            operation = "sin";
+            if (!txtboxdisplay.Text.Contains("sin"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "sin" + txtboxdisplay.Text;
+            }
+        }
+
+        private void cosinebtn_Click(object sender, EventArgs e)
+        {
+            operation = "cos";
+            if (!txtboxdisplay.Text.Contains("cos"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "cos" + txtboxdisplay.Text;
+            }
+        }
+
+        private void tanbtn_Click(object sender, EventArgs e)
+        {
+            operation = "tan";
+            if (!txtboxdisplay.Text.Contains("tan"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "tan" + txtboxdisplay.Text;
+            }
+        }
+
+        private void percentagebtn_Click(object sender, EventArgs e)
+        {
+            operation = "%";
+            if (!txtboxdisplay.Text.Contains("%"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = txtboxdisplay.Text + "%";
+            }
+        }
+
+        private void sinhbtn_Click(object sender, EventArgs e)
+        {
+            operation = "sinh";
+            if (!txtboxdisplay.Text.Contains("sinh"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "sinh" + txtboxdisplay.Text;
+            }
+        }
+
+        private void coshbtn_Click(object sender, EventArgs e)
+        {
+            operation = "cosh";
+            if (!txtboxdisplay.Text.Contains("cosh"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "cosh" + txtboxdisplay.Text;
+            }
+        }
+
+        private void tanhbtn_Click(object sender, EventArgs e)
+        {
+            operation = "tanh";
+            if (!txtboxdisplay.Text.Contains("tanh"))
+            {
+                clearzer0();
+                txtboxdisplay.Text = "tanh" + txtboxdisplay.Text;
+            }
+        }
+
+        private void mcbtn_Click(object sender, EventArgs e)
+        {
+            memoryStore = 0;
+            return;
+        }
+
+        private void mplusbtn_Click(object sender, EventArgs e)
+        {
+            txtboxdisplay.Text = memoryStore.ToString();
+            return;
+        }
+
+        private void mminusbtn_Click(object sender, EventArgs e)
+        {
+            memoryStore -= Convert.ToDouble(answer);
+            return;
+        }
+
+        private void mrbtn_Click(object sender, EventArgs e)
+        {
+            memoryStore += Convert.ToDouble(answer);
+            return;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if (measurementGroupBox.Visible == true)
+            {
+                measurementGroupBox.Visible = false;
+            }
+            else
+            {
+                measurementGroupBox.Visible = true;
+            }
+        }
+
+        private void factorialbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parenthesisopen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void parenthesisclose_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EEbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Radbtn_Click(object sender, EventArgs e)
         {
 
         }
