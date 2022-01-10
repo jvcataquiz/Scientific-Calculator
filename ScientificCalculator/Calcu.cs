@@ -403,8 +403,14 @@ namespace ScientificCalculator
 
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
-                   
 
+                case "EE":
+                    parts = txtboxdisplay.Text.Split("E");
+                    firstvalue = Convert.ToDouble(parts[0]);
+                    secondvalue = Math.Pow(10,Convert.ToDouble(parts[1]));
+                    answer = firstvalue * secondvalue;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
 
             }
         }
@@ -679,7 +685,13 @@ namespace ScientificCalculator
 
         private void EEbtn_Click(object sender, EventArgs e)
         {
-
+            operation = "EE";
+            if (!txtboxdisplay.Text.Contains("E"))
+            {
+                
+                clearzer0();
+                txtboxdisplay.Text = txtboxdisplay.Text + "E";
+            }
         }
 
        
