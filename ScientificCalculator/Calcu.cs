@@ -18,7 +18,6 @@ namespace ScientificCalculator
         double answer;
         string[] parts;
         double memoryStore;
-        int click = 0;
         public Calcu()
         {
             InitializeComponent();
@@ -79,7 +78,6 @@ namespace ScientificCalculator
             this.tanhbtn.Enabled = true;
             this.coshbtn.Enabled = true;
             this.sinhbtn.Enabled = true;
-            this.Radbtn.Enabled = true;
             this.label1.Enabled = true;
             
         }
@@ -684,21 +682,7 @@ namespace ScientificCalculator
 
         }
 
-        private void Radbtn_Click(object sender, EventArgs e)
-        {
-            if (Radbtn.Text == "Rad")
-            {
-                Radbtn.Text = "Deg";
-                firstvalue = Convert.ToDouble(txtboxdisplay.Text) * 180 * Math.PI;
-                txtboxdisplay.Text = firstvalue.ToString();
-            }
-            else
-            {
-                Radbtn.Text = "Rad";
-                firstvalue = Convert.ToDouble(txtboxdisplay.Text) * 180/Math.PI;
-                txtboxdisplay.Text = firstvalue.ToString();
-            }
-        }
+       
 
         private void textBoxSave_TextChanged(object sender, EventArgs e)
         {
@@ -708,6 +692,13 @@ namespace ScientificCalculator
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void randbtn_Click(object sender, EventArgs e)
+        {
+            Random rand = new Random();
+            
+            txtboxdisplay.Text = rand.Next(1, 1000).ToString();
         }
     }
 }

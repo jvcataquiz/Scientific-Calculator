@@ -770,6 +770,7 @@ namespace ScientificCalculator
             this.randbtn.TabIndex = 46;
             this.randbtn.Text = "Rand";
             this.randbtn.UseVisualStyleBackColor = false;
+            this.randbtn.Click += new System.EventHandler(this.randbtn_Click);
             // 
             // pibtn
             // 
@@ -842,9 +843,7 @@ namespace ScientificCalculator
             this.Radbtn.Name = "Radbtn";
             this.Radbtn.Size = new System.Drawing.Size(68, 59);
             this.Radbtn.TabIndex = 41;
-            this.Radbtn.Text = "Rad";
             this.Radbtn.UseVisualStyleBackColor = false;
-            this.Radbtn.Click += new System.EventHandler(this.Radbtn_Click);
             // 
             // label1
             // 
@@ -960,7 +959,7 @@ namespace ScientificCalculator
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(758, 506);
+            this.ClientSize = new System.Drawing.Size(750, 498);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.txtboxdisplay);
