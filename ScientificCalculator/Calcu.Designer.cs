@@ -83,14 +83,8 @@ namespace ScientificCalculator
             this.radiobtnon = new System.Windows.Forms.RadioButton();
             this.radiobtnoff = new System.Windows.Forms.RadioButton();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.measurementGroupBox = new System.Windows.Forms.GroupBox();
-            this.rbtweight = new System.Windows.Forms.RadioButton();
-            this.rbtvol = new System.Windows.Forms.RadioButton();
-            this.rbtlength = new System.Windows.Forms.RadioButton();
-            this.rbttemp = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxSave = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
-            this.measurementGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtboxdisplay
@@ -101,7 +95,7 @@ namespace ScientificCalculator
             this.txtboxdisplay.Enabled = false;
             this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtboxdisplay.ForeColor = System.Drawing.Color.Black;
-            this.txtboxdisplay.Location = new System.Drawing.Point(12, 55);
+            this.txtboxdisplay.Location = new System.Drawing.Point(12, 91);
             this.txtboxdisplay.Name = "txtboxdisplay";
             this.txtboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
@@ -941,89 +935,24 @@ namespace ScientificCalculator
             this.groupBox.Controls.Add(this.mcbtn);
             this.groupBox.Controls.Add(this.parenthesisclose);
             this.groupBox.Controls.Add(this.parenthesisopen);
-            this.groupBox.Location = new System.Drawing.Point(12, 51);
+            this.groupBox.Location = new System.Drawing.Point(12, 77);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(734, 420);
+            this.groupBox.Size = new System.Drawing.Size(734, 444);
             this.groupBox.TabIndex = 54;
             this.groupBox.TabStop = false;
             // 
-            // measurementGroupBox
+            // textBoxSave
             // 
-            this.measurementGroupBox.BackColor = System.Drawing.Color.AliceBlue;
-            this.measurementGroupBox.Controls.Add(this.rbtweight);
-            this.measurementGroupBox.Controls.Add(this.rbtvol);
-            this.measurementGroupBox.Controls.Add(this.rbtlength);
-            this.measurementGroupBox.Controls.Add(this.rbttemp);
-            this.measurementGroupBox.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.measurementGroupBox.Location = new System.Drawing.Point(346, 38);
-            this.measurementGroupBox.Name = "measurementGroupBox";
-            this.measurementGroupBox.Size = new System.Drawing.Size(105, 115);
-            this.measurementGroupBox.TabIndex = 55;
-            this.measurementGroupBox.TabStop = false;
-            this.measurementGroupBox.Visible = false;
-            // 
-            // rbtweight
-            // 
-            this.rbtweight.AutoSize = true;
-            this.rbtweight.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbtweight.Location = new System.Drawing.Point(6, 19);
-            this.rbtweight.Name = "rbtweight";
-            this.rbtweight.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.rbtweight.Size = new System.Drawing.Size(68, 20);
-            this.rbtweight.TabIndex = 4;
-            this.rbtweight.Text = "Weight";
-            this.rbtweight.UseVisualStyleBackColor = true;
-            // 
-            // rbtvol
-            // 
-            this.rbtvol.AutoSize = true;
-            this.rbtvol.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbtvol.Location = new System.Drawing.Point(7, 89);
-            this.rbtvol.Name = "rbtvol";
-            this.rbtvol.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.rbtvol.Size = new System.Drawing.Size(69, 20);
-            this.rbtvol.TabIndex = 3;
-            this.rbtvol.Text = "Volume";
-            this.rbtvol.UseVisualStyleBackColor = true;
-            // 
-            // rbtlength
-            // 
-            this.rbtlength.AutoSize = true;
-            this.rbtlength.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbtlength.Location = new System.Drawing.Point(6, 67);
-            this.rbtlength.Name = "rbtlength";
-            this.rbtlength.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.rbtlength.Size = new System.Drawing.Size(68, 20);
-            this.rbtlength.TabIndex = 2;
-            this.rbtlength.Text = "Length";
-            this.rbtlength.UseVisualStyleBackColor = true;
-            // 
-            // rbttemp
-            // 
-            this.rbttemp.AutoSize = true;
-            this.rbttemp.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.rbttemp.Location = new System.Drawing.Point(6, 42);
-            this.rbttemp.Name = "rbttemp";
-            this.rbttemp.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.rbttemp.Size = new System.Drawing.Size(95, 20);
-            this.rbttemp.TabIndex = 1;
-            this.rbttemp.Text = "Temperature";
-            this.rbttemp.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(344, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 30);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Measurement";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.textBoxSave.BackColor = System.Drawing.Color.LightBlue;
+            this.textBoxSave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSave.Font = new System.Drawing.Font("Arial Narrow", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSave.Location = new System.Drawing.Point(14, 55);
+            this.textBoxSave.Name = "textBoxSave";
+            this.textBoxSave.Size = new System.Drawing.Size(732, 33);
+            this.textBoxSave.TabIndex = 55;
+            this.textBoxSave.TabStop = false;
+            this.textBoxSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxSave.TextChanged += new System.EventHandler(this.textBoxSave_TextChanged);
             // 
             // Calcu
             // 
@@ -1031,10 +960,9 @@ namespace ScientificCalculator
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(749, 467);
+            this.ClientSize = new System.Drawing.Size(758, 506);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.measurementGroupBox);
+            this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.txtboxdisplay);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.radiobtnoff);
@@ -1050,8 +978,6 @@ namespace ScientificCalculator
             this.Text = "Scientific Calculator";
             this.Load += new System.EventHandler(this.Calcu_Load);
             this.groupBox.ResumeLayout(false);
-            this.measurementGroupBox.ResumeLayout(false);
-            this.measurementGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1113,12 +1039,7 @@ namespace ScientificCalculator
         private System.Windows.Forms.RadioButton radiobtnon;
         private System.Windows.Forms.RadioButton radiobtnoff;
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.GroupBox measurementGroupBox;
-        private System.Windows.Forms.RadioButton rbtvol;
-        private System.Windows.Forms.RadioButton rbtlength;
-        private System.Windows.Forms.RadioButton rbttemp;
-        private System.Windows.Forms.RadioButton rbtweight;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxSave;
     }
 }
 

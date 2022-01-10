@@ -18,9 +18,11 @@ namespace ScientificCalculator
         double answer;
         string[] parts;
         double memoryStore;
+        int click = 0;
         public Calcu()
         {
             InitializeComponent();
+           
         }
 
         private void radiobtnon_CheckedChanged(object sender, EventArgs e)
@@ -121,57 +123,67 @@ namespace ScientificCalculator
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "0";
+            
         }
         private void btn1_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "1";
+         
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "2";
+            
         }
 
         private void btn3_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "3";
+           
         }
 
         private void btn4_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "4";
+           
         }
         private void btn5_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "5";
+            
         }
         private void btn6_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "6";
+          
         }
 
         private void btn7_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "7";
+            
         }
 
         private void btn8_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "8";
+          
         }
 
         private void btn9_Click(object sender, EventArgs e)
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "9";
+          
         }
 
         private void decibtn_Click(object sender, EventArgs e)
@@ -181,10 +193,12 @@ namespace ScientificCalculator
             {
                 txtboxdisplay.Text = txtboxdisplay.Text + ".";
             }
+            
         }
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
+
             operation = "+";
             txtboxdisplay.Text = txtboxdisplay.Text + "+";
         }
@@ -193,34 +207,39 @@ namespace ScientificCalculator
         {
             operation = "-";
             txtboxdisplay.Text = txtboxdisplay.Text + "-";
+            
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
             operation = "x";
             txtboxdisplay.Text = txtboxdisplay.Text + "x";
+
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
             operation = "/";
             txtboxdisplay.Text = txtboxdisplay.Text + "/";
-        
+           
+
         }
 
         private void equalbtn_Click(object sender, EventArgs e)
         {
+          
            
             switch (operation)
             {
+
                 case "x":
                     answer = 1;
                     parts = txtboxdisplay.Text.Split("x");
-                   
+
                     for (int i = 0; i < parts.Length; i++)
                     {
                         answer *= (Convert.ToDouble(parts[i]));
                     }
-                   
+
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "/":
@@ -228,12 +247,12 @@ namespace ScientificCalculator
                     parts = txtboxdisplay.Text.Split("/");
                     for (int i = 0; i < parts.Length; i++)
                     {
-                            answer /= (Convert.ToDouble(parts[i]));
-                        if (answer==0)
+                        answer /= (Convert.ToDouble(parts[i]));
+                        if (answer == 0)
                         {
                             answer = (Convert.ToDouble(parts[i]));
                         }
-                     
+
                     }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
@@ -258,11 +277,12 @@ namespace ScientificCalculator
                         {
                             answer -= Convert.ToDouble(parts[i]);
                         }
-                        
+
 
                     }
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
+                   
                 case "%":
                     parts = txtboxdisplay.Text.Split("%");
                     firstvalue = Convert.ToDouble(parts[0]);
@@ -340,7 +360,7 @@ namespace ScientificCalculator
                 case "sin":
                     parts = txtboxdisplay.Text.Split("sin");
                     secondvalue = Convert.ToDouble(parts[1]);
-                    answer = Math.Sin(secondvalue);
+                    answer =Math.Sin(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "cos":
@@ -373,7 +393,21 @@ namespace ScientificCalculator
                     answer = Math.Tanh(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
-          
+                case "facto":
+                    answer = 1;
+                    parts = txtboxdisplay.Text.Split("!");
+                    int num =Convert.ToInt16(parts[0]) ;
+
+                    for (int i = 1; i < num + 1; i++)
+                    {
+                        answer *= (Convert.ToDouble(i));
+                    }
+
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
+                   
+
+
             }
         }
         private void tenraisedbtn_Click(object sender, EventArgs e)
@@ -383,6 +417,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text =   "10 ^" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
            
         }
@@ -391,6 +426,7 @@ namespace ScientificCalculator
         {
               clearzer0();
               txtboxdisplay.Text = txtboxdisplay.Text + "3.1416";
+            textBoxSave.Text = txtboxdisplay.Text;
         }
 
 
@@ -398,11 +434,12 @@ namespace ScientificCalculator
         {
             clearzer0();
             txtboxdisplay.Text = txtboxdisplay.Text + "2.7183";
+            textBoxSave.Text = txtboxdisplay.Text;
         }
 
         private void Calcu_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void squarebtn_Click(object sender, EventArgs e)
@@ -412,6 +449,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "^2";
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -422,6 +460,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "^3";
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -432,6 +471,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "^*";
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -442,6 +482,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "e^" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -452,6 +493,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "1/" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -462,6 +504,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "2√" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -473,6 +516,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "3√" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -483,6 +527,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "√'" ;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -493,6 +538,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text ="ln" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -503,6 +549,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "log10-" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -514,6 +561,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "sin" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -524,6 +572,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "cos" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -534,6 +583,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "tan" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -544,6 +594,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "%";
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -554,6 +605,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "sinh" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -564,6 +616,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "cosh" + txtboxdisplay.Text;
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -574,6 +627,7 @@ namespace ScientificCalculator
             {
                 clearzer0();
                 txtboxdisplay.Text = "tanh" + txtboxdisplay.Text;
+                 textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -601,22 +655,18 @@ namespace ScientificCalculator
             return;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            if (measurementGroupBox.Visible == true)
-            {
-                measurementGroupBox.Visible = false;
-            }
-            else
-            {
-                measurementGroupBox.Visible = true;
-            }
-        }
+       
+           
 
         private void factorialbtn_Click(object sender, EventArgs e)
         {
-
+            operation = "facto";
+            if (!txtboxdisplay.Text.Contains("!"))
+            {
+                clearzer0();
+                txtboxdisplay.Text =  txtboxdisplay.Text + "!";
+                textBoxSave.Text = txtboxdisplay.Text;
+            }
         }
 
         private void parenthesisopen_Click(object sender, EventArgs e)
@@ -635,6 +685,27 @@ namespace ScientificCalculator
         }
 
         private void Radbtn_Click(object sender, EventArgs e)
+        {
+            if (Radbtn.Text == "Rad")
+            {
+                Radbtn.Text = "Deg";
+                firstvalue = Convert.ToDouble(txtboxdisplay.Text) * 180 * Math.PI;
+                txtboxdisplay.Text = firstvalue.ToString();
+            }
+            else
+            {
+                Radbtn.Text = "Rad";
+                firstvalue = Convert.ToDouble(txtboxdisplay.Text) * 180/Math.PI;
+                txtboxdisplay.Text = firstvalue.ToString();
+            }
+        }
+
+        private void textBoxSave_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
