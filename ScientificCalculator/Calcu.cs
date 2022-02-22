@@ -30,8 +30,7 @@ namespace ScientificCalculator
             this.txtboxdisplay.BackColor = System.Drawing.SystemColors.ActiveCaption;
             
             this.txtboxdisplay.Enabled = true;
-            this.parenthesisopen.Enabled = true;
-            this.parenthesisclose.Enabled = true;
+          
             this.mcbtn.Enabled = true;
             this.mrbtn.Enabled = true;
             this.mminusbtn.Enabled = true;
@@ -79,7 +78,7 @@ namespace ScientificCalculator
             this.coshbtn.Enabled = true;
             this.sinhbtn.Enabled = true;
             this.label1.Enabled = true;
-            
+            this.Radbtn.Enabled = true;
         }
         private void radiobtnoff_CheckedChanged(object sender, EventArgs e)
         {
@@ -196,29 +195,37 @@ namespace ScientificCalculator
 
         private void additionbtn_Click(object sender, EventArgs e)
         {
-
+            textBoxSave.Text = txtboxdisplay.Text + " + ";
             operation = "+";
-            txtboxdisplay.Text = txtboxdisplay.Text + "+";
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
+            
         }
 
         private void minusbtn_Click(object sender, EventArgs e)
         {
+            textBoxSave.Text = txtboxdisplay.Text + " - ";
             operation = "-";
-            txtboxdisplay.Text = txtboxdisplay.Text + "-";
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
             
         }
         private void multiplicationbtn_Click(object sender, EventArgs e)
         {
+            textBoxSave.Text = txtboxdisplay.Text + " x ";
             operation = "x";
-            txtboxdisplay.Text = txtboxdisplay.Text + "x";
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
 
         }
 
         private void divisionbtn_Click(object sender, EventArgs e)
         {
+            textBoxSave.Text = txtboxdisplay.Text + " / ";
             operation = "/";
-            txtboxdisplay.Text = txtboxdisplay.Text + "/";
-           
+            firstvalue = Convert.ToDouble(txtboxdisplay.Text);
+            txtboxdisplay.Clear();
+
 
         }
 
@@ -230,82 +237,53 @@ namespace ScientificCalculator
             {
 
                 case "x":
-                    answer = 1;
-                    parts = txtboxdisplay.Text.Split("x");
-
-                    for (int i = 0; i < parts.Length; i++)
-                    {
-                        answer *= (Convert.ToDouble(parts[i]));
-                    }
-
+                    textBoxSave.Text = textBoxSave.Text + txtboxdisplay.Text + " = ";
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    answer = firstvalue * secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "/":
-                    answer = 0;
-                    parts = txtboxdisplay.Text.Split("/");
-                    for (int i = 0; i < parts.Length; i++)
-                    {
-                        answer /= (Convert.ToDouble(parts[i]));
-                        if (answer == 0)
-                        {
-                            answer = (Convert.ToDouble(parts[i]));
-                        }
-
-                    }
+                    textBoxSave.Text = textBoxSave.Text + txtboxdisplay.Text + " = ";
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    answer = firstvalue / secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "+":
-                    parts = txtboxdisplay.Text.Split("+");
-                    for (int i = 0; i < parts.Length; i++)
-                    {
-                        answer = answer + Convert.ToDouble(parts[i]);
-                    }
+                    textBoxSave.Text = textBoxSave.Text + txtboxdisplay.Text + " = ";
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    answer = firstvalue + secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "-":
-                    answer = 0;
-                    parts = txtboxdisplay.Text.Split("-");
-                    for (int i = 0; i < parts.Length; i++)
-                    {
-                        if (answer == 0)
-                        {
-                            answer = (Convert.ToDouble(parts[0])) - Convert.ToDouble(parts[i]);
-                        }
-                        else
-                        {
-                            answer -= Convert.ToDouble(parts[i]);
-                        }
-
-
-                    }
+                    textBoxSave.Text = textBoxSave.Text + txtboxdisplay.Text + " = ";
+                    secondvalue = Convert.ToDouble(txtboxdisplay.Text);
+                    answer = firstvalue - secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
-                   
-                case "%":
-                    parts = txtboxdisplay.Text.Split("%");
-                    firstvalue = Convert.ToDouble(parts[0]);
-                    answer = firstvalue / 100;
-                    txtboxdisplay.Text = Convert.ToString(answer);
-                    break;
+
                 case "^":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("^");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Pow(10, secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "^2":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("^2");
                     firstvalue = Convert.ToDouble(parts[0]);
                     answer = Math.Pow(firstvalue,2);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "^3":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("^3");
                     firstvalue = Convert.ToDouble(parts[0]);
                     answer = Math.Pow(firstvalue, 3);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "^*":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("^*");
                     firstvalue = Convert.ToDouble(parts[0]);
                     secondvalue = Convert.ToDouble(parts[1]);
@@ -313,30 +291,36 @@ namespace ScientificCalculator
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "e^":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("e^");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Pow(2.71828, secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "1/":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("1/");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = 1 / secondvalue;
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "2√":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("2√");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Sqrt(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "3√":
+
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("3√");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Cbrt(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "√'":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("√'");
                     firstvalue = Convert.ToDouble(parts[1]);
                     secondvalue = Convert.ToDouble(parts[0]);
@@ -344,54 +328,70 @@ namespace ScientificCalculator
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "ln":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("ln");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Log(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "log10":
+                    textBoxSave.Text =  txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("log10-");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Log10(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "sin":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("sin");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer =Math.Sin(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "cos":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("cos");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Cos(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "tan":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("tan");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Tan(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "sinh":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("sinh");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Sinh(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "cosh":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("cosh");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Cosh(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
                 case "tanh":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("tanh");
                     secondvalue = Convert.ToDouble(parts[1]);
                     answer = Math.Tanh(secondvalue);
                     txtboxdisplay.Text = Convert.ToString(answer);
                     break;
+                case "neg":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
+                    parts = txtboxdisplay.Text.Split("-");
+                    secondvalue = Convert.ToDouble(parts[1]);
+                    answer = secondvalue * -1;
+                    txtboxdisplay.Text = Convert.ToString(answer);
+                    break;
                 case "facto":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     answer = 1;
                     parts = txtboxdisplay.Text.Split("!");
                     int num =Convert.ToInt16(parts[0]) ;
@@ -405,6 +405,7 @@ namespace ScientificCalculator
                     break;
 
                 case "EE":
+                    textBoxSave.Text = txtboxdisplay.Text + " = ";
                     parts = txtboxdisplay.Text.Split("E");
                     firstvalue = Convert.ToDouble(parts[0]);
                     secondvalue = Math.Pow(10,Convert.ToDouble(parts[1]));
@@ -593,13 +594,13 @@ namespace ScientificCalculator
 
         private void percentagebtn_Click(object sender, EventArgs e)
         {
-            operation = "%";
-            if (!txtboxdisplay.Text.Contains("%"))
-            {
+            
                 clearzer0();
-                txtboxdisplay.Text = txtboxdisplay.Text + "%";
-                textBoxSave.Text = txtboxdisplay.Text;
-            }
+                txtboxdisplay.Text = txtboxdisplay.Text ;
+                textBoxSave.Text = txtboxdisplay.Text + "%" ;
+                answer = Convert.ToDouble(txtboxdisplay.Text) / 100;
+                txtboxdisplay.Text = answer.ToString();
+
         }
 
         private void sinhbtn_Click(object sender, EventArgs e)
@@ -691,6 +692,7 @@ namespace ScientificCalculator
                 
                 clearzer0();
                 txtboxdisplay.Text = txtboxdisplay.Text + "E";
+                textBoxSave.Text = txtboxdisplay.Text;
             }
         }
 
@@ -711,6 +713,25 @@ namespace ScientificCalculator
             Random rand = new Random();
             
             txtboxdisplay.Text = rand.Next(1, 1000).ToString();
+        }
+
+        private void Radbtn_Click(object sender, EventArgs e)
+        {
+            
+            operation = "neg";
+            if (!txtboxdisplay.Text.Contains("--"))
+            {
+
+                clearzer0();
+                txtboxdisplay.Text = "-" +  txtboxdisplay.Text ;
+                textBoxSave.Text = txtboxdisplay.Text;
+
+            }
+        }
+
+        private void Calcu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("THANK YOU FOR USING THIS APPLICATION!!!");
         }
     }
 }

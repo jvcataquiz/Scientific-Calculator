@@ -30,8 +30,6 @@ namespace ScientificCalculator
         private void InitializeComponent()
         {
             this.txtboxdisplay = new System.Windows.Forms.TextBox();
-            this.parenthesisopen = new System.Windows.Forms.Button();
-            this.parenthesisclose = new System.Windows.Forms.Button();
             this.mcbtn = new System.Windows.Forms.Button();
             this.mrbtn = new System.Windows.Forms.Button();
             this.mminusbtn = new System.Windows.Forms.Button();
@@ -78,11 +76,11 @@ namespace ScientificCalculator
             this.tanhbtn = new System.Windows.Forms.Button();
             this.coshbtn = new System.Windows.Forms.Button();
             this.sinhbtn = new System.Windows.Forms.Button();
-            this.Radbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.radiobtnon = new System.Windows.Forms.RadioButton();
             this.radiobtnoff = new System.Windows.Forms.RadioButton();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.Radbtn = new System.Windows.Forms.Button();
             this.textBoxSave = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
@@ -101,38 +99,6 @@ namespace ScientificCalculator
             this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
             this.txtboxdisplay.TabIndex = 0;
             this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // parenthesisopen
-            // 
-            this.parenthesisopen.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.parenthesisopen.Enabled = false;
-            this.parenthesisopen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.parenthesisopen.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.parenthesisopen.ForeColor = System.Drawing.Color.Honeydew;
-            this.parenthesisopen.Location = new System.Drawing.Point(1, 95);
-            this.parenthesisopen.Name = "parenthesisopen";
-            this.parenthesisopen.Size = new System.Drawing.Size(68, 59);
-            this.parenthesisopen.TabIndex = 1;
-            this.parenthesisopen.Text = "(";
-            this.parenthesisopen.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.parenthesisopen.UseVisualStyleBackColor = false;
-            this.parenthesisopen.Click += new System.EventHandler(this.parenthesisopen_Click);
-            // 
-            // parenthesisclose
-            // 
-            this.parenthesisclose.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.parenthesisclose.Enabled = false;
-            this.parenthesisclose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.parenthesisclose.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.parenthesisclose.ForeColor = System.Drawing.Color.Honeydew;
-            this.parenthesisclose.Location = new System.Drawing.Point(75, 95);
-            this.parenthesisclose.Name = "parenthesisclose";
-            this.parenthesisclose.Size = new System.Drawing.Size(68, 59);
-            this.parenthesisclose.TabIndex = 2;
-            this.parenthesisclose.Text = ")";
-            this.parenthesisclose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.parenthesisclose.UseVisualStyleBackColor = false;
-            this.parenthesisclose.Click += new System.EventHandler(this.parenthesisclose_Click);
             // 
             // mcbtn
             // 
@@ -832,19 +798,6 @@ namespace ScientificCalculator
             this.sinhbtn.UseVisualStyleBackColor = false;
             this.sinhbtn.Click += new System.EventHandler(this.sinhbtn_Click);
             // 
-            // Radbtn
-            // 
-            this.Radbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Radbtn.Enabled = false;
-            this.Radbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Radbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Radbtn.ForeColor = System.Drawing.Color.Honeydew;
-            this.Radbtn.Location = new System.Drawing.Point(1, 354);
-            this.Radbtn.Name = "Radbtn";
-            this.Radbtn.Size = new System.Drawing.Size(68, 59);
-            this.Radbtn.TabIndex = 41;
-            this.Radbtn.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -859,11 +812,11 @@ namespace ScientificCalculator
             // 
             this.radiobtnon.AutoSize = true;
             this.radiobtnon.BackColor = System.Drawing.Color.Red;
-            this.radiobtnon.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radiobtnon.Location = new System.Drawing.Point(574, 10);
+            this.radiobtnon.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnon.Location = new System.Drawing.Point(2, 95);
             this.radiobtnon.Name = "radiobtnon";
-            this.radiobtnon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radiobtnon.Size = new System.Drawing.Size(75, 35);
+            this.radiobtnon.Padding = new System.Windows.Forms.Padding(10, 15, 0, 15);
+            this.radiobtnon.Size = new System.Drawing.Size(65, 59);
             this.radiobtnon.TabIndex = 52;
             this.radiobtnon.Text = "ON";
             this.radiobtnon.UseVisualStyleBackColor = false;
@@ -873,11 +826,11 @@ namespace ScientificCalculator
             // 
             this.radiobtnoff.AutoSize = true;
             this.radiobtnoff.BackColor = System.Drawing.Color.Red;
-            this.radiobtnoff.Font = new System.Drawing.Font("Arial Narrow", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radiobtnoff.Location = new System.Drawing.Point(657, 10);
+            this.radiobtnoff.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnoff.Location = new System.Drawing.Point(73, 95);
             this.radiobtnoff.Name = "radiobtnoff";
-            this.radiobtnoff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radiobtnoff.Size = new System.Drawing.Size(87, 35);
+            this.radiobtnoff.Padding = new System.Windows.Forms.Padding(10, 15, 0, 15);
+            this.radiobtnoff.Size = new System.Drawing.Size(70, 57);
             this.radiobtnoff.TabIndex = 53;
             this.radiobtnoff.Text = "OFF";
             this.radiobtnoff.UseVisualStyleBackColor = false;
@@ -888,7 +841,9 @@ namespace ScientificCalculator
             this.groupBox.Controls.Add(this.decibtn);
             this.groupBox.Controls.Add(this.equalbtn);
             this.groupBox.Controls.Add(this.btnzero);
+            this.groupBox.Controls.Add(this.radiobtnoff);
             this.groupBox.Controls.Add(this.randbtn);
+            this.groupBox.Controls.Add(this.radiobtnon);
             this.groupBox.Controls.Add(this.divisionbtn);
             this.groupBox.Controls.Add(this.pibtn);
             this.groupBox.Controls.Add(this.btn3);
@@ -932,13 +887,26 @@ namespace ScientificCalculator
             this.groupBox.Controls.Add(this.mminusbtn);
             this.groupBox.Controls.Add(this.mplusbtn);
             this.groupBox.Controls.Add(this.mcbtn);
-            this.groupBox.Controls.Add(this.parenthesisclose);
-            this.groupBox.Controls.Add(this.parenthesisopen);
             this.groupBox.Location = new System.Drawing.Point(12, 77);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(734, 444);
             this.groupBox.TabIndex = 54;
             this.groupBox.TabStop = false;
+            // 
+            // Radbtn
+            // 
+            this.Radbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Radbtn.Enabled = false;
+            this.Radbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Radbtn.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Radbtn.ForeColor = System.Drawing.Color.Honeydew;
+            this.Radbtn.Location = new System.Drawing.Point(1, 354);
+            this.Radbtn.Name = "Radbtn";
+            this.Radbtn.Size = new System.Drawing.Size(68, 59);
+            this.Radbtn.TabIndex = 41;
+            this.Radbtn.Text = "+/-";
+            this.Radbtn.UseVisualStyleBackColor = false;
+            this.Radbtn.Click += new System.EventHandler(this.Radbtn_Click);
             // 
             // textBoxSave
             // 
@@ -959,13 +927,11 @@ namespace ScientificCalculator
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(750, 498);
+            this.ClientSize = new System.Drawing.Size(760, 506);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxSave);
             this.Controls.Add(this.txtboxdisplay);
             this.Controls.Add(this.groupBox);
-            this.Controls.Add(this.radiobtnoff);
-            this.Controls.Add(this.radiobtnon);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -975,8 +941,10 @@ namespace ScientificCalculator
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scientific Calculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Calcu_FormClosing);
             this.Load += new System.EventHandler(this.Calcu_Load);
             this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -985,8 +953,6 @@ namespace ScientificCalculator
         #endregion
 
         private System.Windows.Forms.TextBox txtboxdisplay;
-        private System.Windows.Forms.Button parenthesisopen;
-        private System.Windows.Forms.Button parenthesisclose;
         private System.Windows.Forms.Button mcbtn;
         private System.Windows.Forms.Button mrbtn;
         private System.Windows.Forms.Button mminusbtn;
@@ -1033,12 +999,12 @@ namespace ScientificCalculator
         private System.Windows.Forms.Button tanhbtn;
         private System.Windows.Forms.Button coshbtn;
         private System.Windows.Forms.Button sinhbtn;
-        private System.Windows.Forms.Button Radbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radiobtnon;
         private System.Windows.Forms.RadioButton radiobtnoff;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.TextBox textBoxSave;
+        private System.Windows.Forms.Button Radbtn;
     }
 }
 

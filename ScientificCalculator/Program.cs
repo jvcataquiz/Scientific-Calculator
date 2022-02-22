@@ -17,7 +17,7 @@ namespace ScientificCalculator
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calcu());
+            Application.Run(new _Opening());
         }
     }
 }
