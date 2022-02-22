@@ -660,9 +660,6 @@ namespace ScientificCalculator
             return;
         }
 
-       
-           
-
         private void factorialbtn_Click(object sender, EventArgs e)
         {
             operation = "facto";
@@ -674,15 +671,6 @@ namespace ScientificCalculator
             }
         }
 
-        private void parenthesisopen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void parenthesisclose_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void EEbtn_Click(object sender, EventArgs e)
         {
