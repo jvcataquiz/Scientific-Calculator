@@ -29,6 +29,7 @@ namespace ScientificCalculator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtboxdisplay = new System.Windows.Forms.TextBox();
             this.mcbtn = new System.Windows.Forms.Button();
             this.mrbtn = new System.Windows.Forms.Button();
@@ -82,6 +83,9 @@ namespace ScientificCalculator
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.Radbtn = new System.Windows.Forms.Button();
             this.textBoxSave = new System.Windows.Forms.TextBox();
+            this.History = new System.Windows.Forms.Button();
+            this.richTextBoxHistory = new System.Windows.Forms.RichTextBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,12 +95,12 @@ namespace ScientificCalculator
             this.txtboxdisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtboxdisplay.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtboxdisplay.Enabled = false;
-            this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtboxdisplay.Font = new System.Drawing.Font("Tahoma", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtboxdisplay.ForeColor = System.Drawing.Color.Black;
-            this.txtboxdisplay.Location = new System.Drawing.Point(12, 91);
+            this.txtboxdisplay.Location = new System.Drawing.Point(211, 91);
             this.txtboxdisplay.Name = "txtboxdisplay";
             this.txtboxdisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtboxdisplay.Size = new System.Drawing.Size(734, 65);
+            this.txtboxdisplay.Size = new System.Drawing.Size(535, 59);
             this.txtboxdisplay.TabIndex = 0;
             this.txtboxdisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -913,13 +917,45 @@ namespace ScientificCalculator
             this.textBoxSave.BackColor = System.Drawing.Color.LightBlue;
             this.textBoxSave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSave.Font = new System.Drawing.Font("Arial Narrow", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxSave.Location = new System.Drawing.Point(14, 55);
+            this.textBoxSave.Location = new System.Drawing.Point(211, 52);
             this.textBoxSave.Name = "textBoxSave";
-            this.textBoxSave.Size = new System.Drawing.Size(732, 33);
+            this.textBoxSave.Size = new System.Drawing.Size(535, 33);
             this.textBoxSave.TabIndex = 55;
             this.textBoxSave.TabStop = false;
             this.textBoxSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxSave.TextChanged += new System.EventHandler(this.textBoxSave_TextChanged);
+            // 
+            // History
+            // 
+            this.History.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.History.Location = new System.Drawing.Point(211, 12);
+            this.History.Name = "History";
+            this.History.Size = new System.Drawing.Size(75, 38);
+            this.History.TabIndex = 57;
+            this.History.TabStop = false;
+            this.History.Text = "History";
+            this.History.UseVisualStyleBackColor = true;
+            this.History.Visible = false;
+            this.History.Click += new System.EventHandler(this.History_Click);
+            // 
+            // richTextBoxHistory
+            // 
+            this.richTextBoxHistory.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxHistory.Location = new System.Drawing.Point(8, 47);
+            this.richTextBoxHistory.Name = "richTextBoxHistory";
+            this.richTextBoxHistory.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBoxHistory.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBoxHistory.Size = new System.Drawing.Size(197, 108);
+            this.richTextBoxHistory.TabIndex = 56;
+            this.richTextBoxHistory.Text = "";
+            this.richTextBoxHistory.Visible = false;
+            this.richTextBoxHistory.TextChanged += new System.EventHandler(this.richTextBoxHistory_TextChanged);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 500;
+            this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Calcu
             // 
@@ -927,9 +963,11 @@ namespace ScientificCalculator
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(760, 506);
+            this.ClientSize = new System.Drawing.Size(756, 502);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxSave);
+            this.Controls.Add(this.History);
+            this.Controls.Add(this.richTextBoxHistory);
             this.Controls.Add(this.txtboxdisplay);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.label1);
@@ -1005,6 +1043,9 @@ namespace ScientificCalculator
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.TextBox textBoxSave;
         private System.Windows.Forms.Button Radbtn;
+        private System.Windows.Forms.RichTextBox richTextBoxHistory;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button History;
     }
 }
 

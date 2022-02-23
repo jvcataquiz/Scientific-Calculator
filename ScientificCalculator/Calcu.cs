@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
+using System.Diagnostics;
 namespace ScientificCalculator
 {
     public partial class Calcu : Form
@@ -18,6 +19,8 @@ namespace ScientificCalculator
         double answer;
         string[] parts;
         double memoryStore;
+        StreamWriter outputFile;
+        string filedata;
         public Calcu()
         {
             InitializeComponent();
@@ -79,6 +82,8 @@ namespace ScientificCalculator
             this.sinhbtn.Enabled = true;
             this.label1.Enabled = true;
             this.Radbtn.Enabled = true;
+            this.richTextBoxHistory.Visible = true;
+            this.History.Visible = true;
         }
         private void radiobtnoff_CheckedChanged(object sender, EventArgs e)
         {
@@ -414,6 +419,13 @@ namespace ScientificCalculator
                     break;
 
             }
+          
+            outputFile = File.AppendText("History.txt");
+            outputFile.WriteLine("\nDate: " + DateTime.Now.ToString());
+            outputFile.WriteLine(textBoxSave.Text);
+            outputFile.WriteLine("Answer: " + answer );
+            outputFile.Close();
+
         }
         private void tenraisedbtn_Click(object sender, EventArgs e)
         {
@@ -444,7 +456,8 @@ namespace ScientificCalculator
 
         private void Calcu_Load(object sender, EventArgs e)
         {
-           
+            
+
         }
 
         private void squarebtn_Click(object sender, EventArgs e)
@@ -691,11 +704,6 @@ namespace ScientificCalculator
           
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void randbtn_Click(object sender, EventArgs e)
         {
             Random rand = new Random();
@@ -720,6 +728,25 @@ namespace ScientificCalculator
         private void Calcu_FormClosing(object sender, FormClosingEventArgs e)
         {
             MessageBox.Show("THANK YOU FOR USING THIS APPLICATION!!!");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            filedata = File.ReadAllText("History.txt");
+            richTextBoxHistory.AppendText(filedata);
+           
+        }
+
+        private void richTextBoxHistory_TextChanged(object sender, EventArgs e)
+        {
+            richTextBoxHistory.SelectionStart = richTextBoxHistory.Text.Length;
+            richTextBoxHistory.ScrollToCaret();
+          
+        }
+
+        private void History_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe", "History.txt");
         }
     }
 }
